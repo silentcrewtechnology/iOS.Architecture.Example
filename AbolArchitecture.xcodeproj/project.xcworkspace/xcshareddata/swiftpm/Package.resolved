@@ -1,0 +1,87 @@
+{
+  "originHash" : "f54ac197299329717b7648a163df9fadc4173ef20424452054426ea1b60a2f00",
+  "pins" : [
+    {
+      "identity" : "ios-resources-colors",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.akbars.tech/abo/ios-resources-colors.git",
+      "state" : {
+        "revision" : "a5575917f6db4ed88533fa8ed13ff2f36ba6a09c",
+        "version" : "0.0.3"
+      }
+    },
+    {
+      "identity" : "ios-resources-fonts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.akbars.tech/abo/ios-resources-fonts.git",
+      "state" : {
+        "revision" : "ba60010f93fa82ff25fa3509ed1a132833a1d590",
+        "version" : "0.0.1"
+      }
+    },
+    {
+      "identity" : "ios-resources-icons",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.akbars.tech/abo/ios-resources-icons.git",
+      "state" : {
+        "revision" : "d6da23cff2c9b4c569cff3146e360057ef1a2445",
+        "version" : "0.0.2"
+      }
+    },
+    {
+      "identity" : "ios-resources-ui-components",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.akbars.tech/abo/ios-resources-ui-components.git",
+      "state" : {
+        "revision" : "ee42473b85ae79ce244dca95e16f4626a1c36f88",
+        "version" : "0.0.40"
+      }
+    },
+    {
+      "identity" : "ios.architecture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.akbars.tech/abo/ios.architecture",
+      "state" : {
+        "branch" : "vesion-1.1",
+        "revision" : "fbcb20524e2ab99c4c872afc51258beb11c6554d"
+      }
+    },
+    {
+      "identity" : "ios.designsystem",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.akbars.tech/abo/ios.designsystem",
+      "state" : {
+        "revision" : "2a0f1bcb7cf7e3290a92525a97bfc641541e4405",
+        "version" : "0.2.41"
+      }
+    },
+    {
+      "identity" : "resolver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hmlongco/Resolver.git",
+      "state" : {
+        "revision" : "47602af1ac8d7952299fbd0bda3cfbd12cf3a8ca",
+        "version" : "1.5.1"
+      }
+    },
+    {
+      "identity" : "router",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.com/firdavs3/router",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e6edbe211ea4db4e367070725b5f12b2aa487556"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "state" : {
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
+        "version" : "5.6.0"
+      }
+    }
+  ],
+  "version" : 3
+}

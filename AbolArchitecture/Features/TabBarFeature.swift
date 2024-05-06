@@ -1,0 +1,48 @@
+//
+//  TabBarFeature.swift
+//  AbolArchitecture
+//
+//  Created by firdavs on 02.05.2024.
+//
+import Architecture
+import UIKit
+
+final class TabBarFeature: FeatureCoordinatorProtocol {
+    
+    private var tabBarVCBuilder: TabBarVCBuilder
+    
+    init(
+        tabBarVCBuilder: TabBarVCBuilder = TabBarVCBuilder.build(with: TabBarVC.ViewProperties())
+    ) {
+        self.tabBarVCBuilder = tabBarVCBuilder
+    }
+    
+    var runNewFlow: ((Any) -> Void)?
+    
+    func runFlow(data: Any?) -> (any Architecture.BuilderProtocol)? {
+        guard let viewControllers = data as? [UIViewController] else { return nil }
+        let vp = createTabBarVCViewProperties(viewControllers: viewControllers)
+        self.tabBarVCBuilder = TabBarVCBuilder.build(with: vp)
+        return tabBarVCBuilder
+    }
+    
+    private func setupTabBarVCBuilder(viewControllers: [UIViewController]) -> TabBarVCBuilder {
+        return tabBarVCBuilder
+    }
+    
+    private func createTabBarVCViewProperties(
+        viewControllers: [UIViewController]
+    ) -> TabBarVC.ViewProperties {
+        let vp = TabBarVC.ViewProperties(
+            viewDidLayoutSubviews: {},
+            viewWillAppear: {},
+            viewDidAppear: {},
+            viewControllers: viewControllers,
+            selectedIndex: 0,
+            tintColor: .green,
+            barTintColor: .green,
+            backgroundColor: .green
+        )
+        return vp
+    }
+}
