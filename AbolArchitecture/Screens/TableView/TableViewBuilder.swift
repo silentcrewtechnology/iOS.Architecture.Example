@@ -9,35 +9,20 @@ import UIKit
 
 struct TableViewBuilder: BuilderProtocol {
     
-    typealias VIEW = TableView
-    typealias UPDATER = TableViewUpdater
+    typealias V = TableView
+    typealias U = TableViewUpdater
     
     public var view: TableView
-    public var updater: TableViewUpdater
+    public var viewUpdater: TableViewUpdater
     
-    public static func build(
-        with viewProperties: TableView.ViewProperties
-    ) -> TableViewBuilder {
-        let view = TableView(
-            viewProperties: viewProperties,
+    init(with viewProperties: TableView.ViewProperties) {
+        view = TableView(
+            viewProperties: viewProperties, 
             style: .plain
         )
-        let updater = TableViewUpdater(
-            viewProperties: viewProperties
+        viewUpdater = TableViewUpdater(
+            viewProperties: viewProperties,
+            update: view.update
         )
-        updater.bind(with: view)
-        let selfBuilder = TableViewBuilder(
-            with: view,
-            with: updater
-		)
-        return selfBuilder
-    }
-    
-    private init(
-        with view: TableView,
-        with updater: TableViewUpdater
-    ) {
-        self.view = view
-        self.updater = updater
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		CE4593402BE890FA0031FB59 /* ProfileVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45933F2BE890FA0031FB59 /* ProfileVCBuilder.swift */; };
 		CE4593422BE891190031FB59 /* ProfileVCUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593412BE891190031FB59 /* ProfileVCUpdater.swift */; };
 		CE4593452BE896A70031FB59 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE4593442BE896A70031FB59 /* Architecture */; };
+		CE45936C2BE8FE940031FB59 /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = CE45936B2BE8FE940031FB59 /* Router */; };
 		CE6663CE2BE35AE700514E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6663CD2BE35AE700514E86 /* AppDelegate.swift */; };
 		CE6663D02BE35AE700514E86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6663CF2BE35AE700514E86 /* SceneDelegate.swift */; };
 		CE6663D72BE35AE900514E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6663D62BE35AE900514E86 /* Assets.xcassets */; };
@@ -36,7 +37,6 @@
 		CE6663F12BE35AE900514E86 /* ArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6663F02BE35AE900514E86 /* ArchitectureUITestsLaunchTests.swift */; };
 		CE6664032BE35DF200514E86 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = CE6664022BE35DF200514E86 /* DesignSystem */; };
 		CE6664062BE3605200514E86 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = CE6664052BE3605200514E86 /* Readme.md */; };
-		CE6664092BE361D600514E86 /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = CE6664082BE361D600514E86 /* Router */; };
 		CE66640D2BE3665D00514E86 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = CE66640C2BE3665D00514E86 /* Resolver */; };
 		CE6664102BE3667800514E86 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66640F2BE3667800514E86 /* Dependency.swift */; };
 /* End PBXBuildFile section */
@@ -100,8 +100,8 @@
 			files = (
 				CE66640D2BE3665D00514E86 /* Resolver in Frameworks */,
 				CE6664032BE35DF200514E86 /* DesignSystem in Frameworks */,
-				CE6664092BE361D600514E86 /* Router in Frameworks */,
 				CE4593452BE896A70031FB59 /* Architecture in Frameworks */,
+				CE45936C2BE8FE940031FB59 /* Router in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,9 +306,9 @@
 			name = AbolArchitecture;
 			packageProductDependencies = (
 				CE6664022BE35DF200514E86 /* DesignSystem */,
-				CE6664082BE361D600514E86 /* Router */,
 				CE66640C2BE3665D00514E86 /* Resolver */,
 				CE4593442BE896A70031FB59 /* Architecture */,
+				CE45936B2BE8FE940031FB59 /* Router */,
 			);
 			productName = Architecture;
 			productReference = CE6663CA2BE35AE700514E86 /* AbolArchitecture.app */;
@@ -384,9 +384,9 @@
 			mainGroup = CE6663C12BE35AE700514E86;
 			packageReferences = (
 				CE6664012BE35DF200514E86 /* XCRemoteSwiftPackageReference "ios" */,
-				CE6664072BE361D600514E86 /* XCRemoteSwiftPackageReference "router" */,
 				CE66640B2BE3665D00514E86 /* XCRemoteSwiftPackageReference "Resolver" */,
 				CE4593432BE896A70031FB59 /* XCRemoteSwiftPackageReference "ios" */,
+				CE45936A2BE8FE940031FB59 /* XCLocalSwiftPackageReference "../Новая папка/Router" */,
 			);
 			productRefGroup = CE6663CB2BE35AE700514E86 /* Products */;
 			projectDirPath = "";
@@ -790,6 +790,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		CE45936A2BE8FE940031FB59 /* XCLocalSwiftPackageReference "../Новая папка/Router" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../Новая папка/Router";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		CE4593432BE896A70031FB59 /* XCRemoteSwiftPackageReference "ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -805,14 +812,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.2.41;
-			};
-		};
-		CE6664072BE361D600514E86 /* XCRemoteSwiftPackageReference "router" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.com/firdavs3/router";
-			requirement = {
-				branch = main;
-				kind = branch;
 			};
 		};
 		CE66640B2BE3665D00514E86 /* XCRemoteSwiftPackageReference "Resolver" */ = {
@@ -831,15 +830,14 @@
 			package = CE4593432BE896A70031FB59 /* XCRemoteSwiftPackageReference "ios" */;
 			productName = Architecture;
 		};
+		CE45936B2BE8FE940031FB59 /* Router */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Router;
+		};
 		CE6664022BE35DF200514E86 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE6664012BE35DF200514E86 /* XCRemoteSwiftPackageReference "ios" */;
 			productName = DesignSystem;
-		};
-		CE6664082BE361D600514E86 /* Router */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE6664072BE361D600514E86 /* XCRemoteSwiftPackageReference "router" */;
-			productName = Router;
 		};
 		CE66640C2BE3665D00514E86 /* Resolver */ = {
 			isa = XCSwiftPackageProductDependency;

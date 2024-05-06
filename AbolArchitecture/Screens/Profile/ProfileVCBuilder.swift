@@ -10,35 +10,19 @@ import Architecture
 
 struct ProfileVCBuilder: BuilderProtocol {
    
-    typealias VIEW = ProfileVC
-    typealias UPDATER = ProfileVCUpdater
+    typealias V = ProfileVC
+    typealias U = ProfileVCUpdater
     
     public var view: ProfileVC
-    public var updater: ProfileVCUpdater
+    public var viewUpdater: ProfileVCUpdater
     
-    public static func build(
-        with viewProperties: ProfileVC.ViewProperties
-    ) -> ProfileVCBuilder {
-        let viewController = ProfileVC(
+    init(with viewProperties: ProfileVC.ViewProperties) {
+        view = ProfileVC(
             viewProperties: viewProperties
         )
-        let updater = ProfileVCUpdater(
-            viewProperties: viewProperties
+        viewUpdater = ProfileVCUpdater(
+            viewProperties: viewProperties,
+            update: view.update
         )
-        viewController.loadViewIfNeeded()
-        updater.bind(with: viewController)
-        let selfBuilder = ProfileVCBuilder(
-            with: viewController,
-            with: updater
-        )
-        return selfBuilder
-    }
-    
-    private init(
-        with viewController: ProfileVC,
-        with updater: ProfileVCUpdater
-    ) {
-        self.view = viewController
-        self.updater = updater
     }
 }

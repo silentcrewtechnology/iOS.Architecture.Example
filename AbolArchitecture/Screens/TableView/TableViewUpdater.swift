@@ -7,7 +7,7 @@
 import Architecture
 import UIKit
 
-final class TableViewUpdater: Updater<TableView> {
+final class TableViewUpdater: ViewUpdater<TableView> {
     
     var viewProperties: TableView.ViewProperties
     
@@ -24,14 +24,18 @@ final class TableViewUpdater: Updater<TableView> {
         guard let state = self.state else { return }
         switch state {
 			case .reloadData:
-				self.update?(self.viewProperties)
+				self.update(self.viewProperties)
         }
     }
     
     override init(
-        viewProperties: TableView.ViewProperties
+        viewProperties: TableView.ViewProperties,
+        update: @escaping Closure<TableView.ViewProperties>
     ) {
         self.viewProperties = viewProperties
-        super.init(viewProperties: viewProperties)
+        super.init(
+            viewProperties: viewProperties,
+            update: update
+        )
     }
 }

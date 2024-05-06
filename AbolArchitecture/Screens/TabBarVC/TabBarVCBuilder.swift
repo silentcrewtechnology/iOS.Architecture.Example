@@ -9,35 +9,19 @@ import Architecture
 
 struct TabBarVCBuilder: BuilderProtocol {
    
-    typealias VIEW = TabBarVC
-    typealias UPDATER = TabBarVCUpdater
+    typealias V = TabBarVC
+    typealias U = TabBarVCUpdater
     
     public var view: TabBarVC
-    public var updater: TabBarVCUpdater
+    public var viewUpdater: TabBarVCUpdater
     
-    public static func build(
-        with viewProperties: TabBarVC.ViewProperties
-    ) -> TabBarVCBuilder {
-        let viewController = TabBarVC(
+    init(with viewProperties: TabBarVC.ViewProperties) {
+        view = TabBarVC(
             viewProperties: viewProperties
         )
-        let updater = TabBarVCUpdater(
-            viewProperties: viewProperties
+        viewUpdater = TabBarVCUpdater(
+            viewProperties: viewProperties,
+            update: view.update
         )
-        viewController.loadViewIfNeeded()
-        updater.bind(with: viewController)
-        let selfBuilder = TabBarVCBuilder(
-            with: viewController,
-            with: updater
-        )
-        return selfBuilder
-    }
-    
-    private init(
-        with viewController: TabBarVC,
-        with updater: TabBarVCUpdater
-    ) {
-        self.view = viewController
-        self.updater = updater
     }
 }

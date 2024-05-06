@@ -7,7 +7,7 @@
 import Foundation
 import Architecture
 
-final class ProfileVCUpdater: Updater<ProfileVC> {
+final class ProfileVCUpdater: ViewUpdater<ProfileVC> {
     
     var viewProperties: ProfileVC.ViewProperties
     
@@ -26,9 +26,13 @@ final class ProfileVCUpdater: Updater<ProfileVC> {
     }
     
     override init(
-        viewProperties: ProfileVC.ViewProperties
+        viewProperties: ProfileVC.ViewProperties,
+        update: @escaping Closure<ProfileVC.ViewProperties>
     ) {
         self.viewProperties = viewProperties
-        super.init(viewProperties: viewProperties)
+        super.init(
+            viewProperties: viewProperties,
+            update: update
+        )
     }
 }

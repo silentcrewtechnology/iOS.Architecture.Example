@@ -78,11 +78,11 @@ extension Resolver: ResolverRegistering {
     
     private static func builders() {
         Resolver.register { (_, args) in
-            StartVCBuilder.build(with: args())
+            StartVCBuilder(with: args())
         }
         
         Resolver.register { (_, args) in
-            ProfileVCBuilder.build(with: args())
+            ProfileVCBuilder(with: args())
         }
     }
 }

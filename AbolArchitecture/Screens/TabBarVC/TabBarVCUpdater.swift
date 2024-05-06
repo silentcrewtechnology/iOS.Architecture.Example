@@ -7,7 +7,7 @@
 import Foundation
 import Architecture
 
-final class TabBarVCUpdater: Updater<TabBarVC> {
+final class TabBarVCUpdater: ViewUpdater<TabBarVC> {
     
     var viewProperties: TabBarVC.ViewProperties
     
@@ -25,14 +25,18 @@ final class TabBarVCUpdater: Updater<TabBarVC> {
         switch state {
             case .setSelectedIndex(let selectedIndex):
                 self.viewProperties.selectedIndex = selectedIndex
-                self.update?(self.viewProperties)
+                self.update(self.viewProperties)
         }
     }
     
     override init(
-        viewProperties: TabBarVC.ViewProperties
+        viewProperties: TabBarVC.ViewProperties,
+        update: @escaping Closure<TabBarVC.ViewProperties>
     ) {
         self.viewProperties = viewProperties
-        super.init(viewProperties: viewProperties)
+        super.init(
+            viewProperties: viewProperties,
+            update: update
+        )
     }
 }

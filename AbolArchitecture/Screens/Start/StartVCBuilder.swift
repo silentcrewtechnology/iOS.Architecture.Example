@@ -9,36 +9,21 @@ import Architecture
 
 struct StartVCBuilder: BuilderProtocol {
    
-    typealias VIEW = StartVC
-    typealias UPDATER = StartVCUpdater
+    typealias V = StartVC
+    typealias U = StartVCUpdater
     
     public var view: StartVC
-    public var updater: StartVCUpdater
+    public var viewUpdater: StartVCUpdater
     
-    public static func build(
-        with viewProperties: StartVC.ViewProperties
-    ) -> StartVCBuilder {
-        let viewController = StartVC(
+    init(with viewProperties: StartVC.ViewProperties) {
+        view = StartVC(
             viewProperties: viewProperties
         )
-        let updater = StartVCUpdater(
-            viewProperties: viewProperties
+        view.loadViewIfNeeded()
+        viewUpdater = StartVCUpdater(
+            viewProperties: viewProperties,
+            update: view.update
         )
-        viewController.loadViewIfNeeded()
-        updater.bind(with: viewController)
-        let selfBuilder = StartVCBuilder(
-            with: viewController,
-            with: updater
-        )
-        return selfBuilder
-    }
-    
-    private init(
-        with viewController: StartVC,
-        with updater: StartVCUpdater
-    ) {
-        self.view = viewController
-        self.updater = updater
     }
 }
 

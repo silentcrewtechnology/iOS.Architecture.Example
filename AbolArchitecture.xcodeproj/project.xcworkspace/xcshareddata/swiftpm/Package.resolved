@@ -1,5 +1,5 @@
 {
-  "originHash" : "f54ac197299329717b7648a163df9fadc4173ef20424452054426ea1b60a2f00",
+  "originHash" : "9804bb3c7db2ae6aa6f43aa6a939ca2055fc51b0c9afaa8b396697df989e8154",
   "pins" : [
     {
       "identity" : "ios-resources-colors",
@@ -43,7 +43,7 @@
       "location" : "https://gitlab.akbars.tech/abo/ios.architecture",
       "state" : {
         "branch" : "vesion-1.1",
-        "revision" : "fbcb20524e2ab99c4c872afc51258beb11c6554d"
+        "revision" : "65d2e347b38d7342d358f17b9dce39fb555ace12"
       }
     },
     {
@@ -62,15 +62,6 @@
       "state" : {
         "revision" : "47602af1ac8d7952299fbd0bda3cfbd12cf3a8ca",
         "version" : "1.5.1"
-      }
-    },
-    {
-      "identity" : "router",
-      "kind" : "remoteSourceControl",
-      "location" : "https://gitlab.com/firdavs3/router",
-      "state" : {
-        "branch" : "main",
-        "revision" : "e6edbe211ea4db4e367070725b5f12b2aa487556"
       }
     },
     {

@@ -7,7 +7,7 @@
 import Foundation
 import Architecture
 
-final class StartVCUpdater: Updater<StartVC> {
+final class StartVCUpdater: ViewUpdater<StartVC> {
     
     var viewProperties: StartVC.ViewProperties
     
@@ -24,14 +24,18 @@ final class StartVCUpdater: Updater<StartVC> {
         guard let state = self.state else { return }
         switch state {
             case .setSelectedIndex(let selectedIndex):
-                self.update?(self.viewProperties)
+                self.update(self.viewProperties)
         }
     }
     
     override init(
-        viewProperties: StartVC.ViewProperties
+        viewProperties: StartVC.ViewProperties,
+        update: @escaping Closure<StartVC.ViewProperties>
     ) {
         self.viewProperties = viewProperties
-        super.init(viewProperties: viewProperties)
+        super.init(
+            viewProperties: viewProperties,
+            update: update
+        )
     }
 }
