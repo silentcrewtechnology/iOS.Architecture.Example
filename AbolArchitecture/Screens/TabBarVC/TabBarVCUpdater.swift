@@ -14,6 +14,7 @@ final class TabBarVCUpdater: ViewUpdater<TabBarVC> {
     //MARK: - Main state view model
     enum State {
         case setSelectedIndex(Int)
+        case setViewProperties(TabBarVC.ViewProperties)
     }
     
     public var state: State? {
@@ -26,6 +27,10 @@ final class TabBarVCUpdater: ViewUpdater<TabBarVC> {
             case .setSelectedIndex(let selectedIndex):
                 self.viewProperties.selectedIndex = selectedIndex
                 self.update(self.viewProperties)
+            
+        case .setViewProperties(let viewProperties):
+            self.viewProperties = viewProperties
+            self.update(self.viewProperties)
         }
     }
     

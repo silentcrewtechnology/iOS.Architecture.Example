@@ -22,7 +22,7 @@ final class TabBarFeature: FeatureCoordinatorProtocol {
     func runFlow(data: Any?) -> (any Architecture.BuilderProtocol)? {
         guard let viewControllers = data as? [UIViewController] else { return nil }
         let vp = createTabBarVCViewProperties(viewControllers: viewControllers)
-        self.tabBarVCBuilder = TabBarVCBuilder(with: vp)
+        self.tabBarVCBuilder.viewUpdater.state = .setViewProperties(vp)
         return tabBarVCBuilder
     }
     

@@ -22,7 +22,7 @@ final class ProfileVCUpdater: ViewUpdater<ProfileVC> {
     
     private func stateManager(){
         guard let state = self.state else { return }
-        
+        update(self.viewProperties)
     }
     
     override init(
