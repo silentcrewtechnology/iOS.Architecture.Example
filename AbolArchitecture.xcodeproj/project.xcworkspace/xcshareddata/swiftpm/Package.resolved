@@ -1,5 +1,4 @@
 {
-  "originHash" : "429a6662c188e43c5758969debbdb1ee66c9a0e99d7aa78afa88c02f6ee9ef2e",
   "pins" : [
     {
       "identity" : "ios-resources-colors",
@@ -47,15 +46,6 @@
       }
     },
     {
-      "identity" : "ios.architecture",
-      "kind" : "remoteSourceControl",
-      "location" : "https://gitlab.akbars.tech/abo/ios.architecture",
-      "state" : {
-        "branch" : "vesion-1.1",
-        "revision" : "65d2e347b38d7342d358f17b9dce39fb555ace12"
-      }
-    },
-    {
       "identity" : "ios.designsystem",
       "kind" : "remoteSourceControl",
       "location" : "https://gitlab.akbars.tech/abo/ios.designsystem",
@@ -83,5 +73,5 @@
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }

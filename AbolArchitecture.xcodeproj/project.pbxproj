@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1CE7162C086B87006F6468 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE1CE7152C086B87006F6468 /* Architecture */; };
 		CE1EFC112BEA514A002EA59B /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = CE1EFC102BEA514A002EA59B /* Router */; };
 		CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593102BE873640031FB59 /* TabBarVC.swift */; };
 		CE4593182BE877A40031FB59 /* TableViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593162BE877A40031FB59 /* TableViewUpdater.swift */; };
@@ -27,7 +28,6 @@
 		CE45933E2BE890E00031FB59 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45933D2BE890E00031FB59 /* ProfileVC.swift */; };
 		CE4593402BE890FA0031FB59 /* ProfileVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45933F2BE890FA0031FB59 /* ProfileVCBuilder.swift */; };
 		CE4593422BE891190031FB59 /* ProfileVCUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593412BE891190031FB59 /* ProfileVCUpdater.swift */; };
-		CE4593452BE896A70031FB59 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE4593442BE896A70031FB59 /* Architecture */; };
 		CE45936C2BE8FE940031FB59 /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = CE45936B2BE8FE940031FB59 /* Router */; };
 		CE6663CE2BE35AE700514E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6663CD2BE35AE700514E86 /* AppDelegate.swift */; };
 		CE6663D02BE35AE700514E86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6663CF2BE35AE700514E86 /* SceneDelegate.swift */; };
@@ -40,6 +40,7 @@
 		CE6664062BE3605200514E86 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = CE6664052BE3605200514E86 /* Readme.md */; };
 		CE66640D2BE3665D00514E86 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = CE66640C2BE3665D00514E86 /* Resolver */; };
 		CE6664102BE3667800514E86 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66640F2BE3667800514E86 /* Dependency.swift */; };
+		CE668F8E2BEB585800827E64 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE668F8D2BEB585800827E64 /* Architecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,8 +103,9 @@
 				CE1EFC112BEA514A002EA59B /* Router in Frameworks */,
 				CE66640D2BE3665D00514E86 /* Resolver in Frameworks */,
 				CE6664032BE35DF200514E86 /* DesignSystem in Frameworks */,
-				CE4593452BE896A70031FB59 /* Architecture in Frameworks */,
+				CE1CE7162C086B87006F6468 /* Architecture in Frameworks */,
 				CE45936C2BE8FE940031FB59 /* Router in Frameworks */,
+				CE668F8E2BEB585800827E64 /* Architecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,9 +311,10 @@
 			packageProductDependencies = (
 				CE6664022BE35DF200514E86 /* DesignSystem */,
 				CE66640C2BE3665D00514E86 /* Resolver */,
-				CE4593442BE896A70031FB59 /* Architecture */,
 				CE45936B2BE8FE940031FB59 /* Router */,
 				CE1EFC102BEA514A002EA59B /* Router */,
+				CE668F8D2BEB585800827E64 /* Architecture */,
+				CE1CE7152C086B87006F6468 /* Architecture */,
 			);
 			productName = Architecture;
 			productReference = CE6663CA2BE35AE700514E86 /* AbolArchitecture.app */;
@@ -388,8 +391,8 @@
 			packageReferences = (
 				CE6664012BE35DF200514E86 /* XCRemoteSwiftPackageReference "ios" */,
 				CE66640B2BE3665D00514E86 /* XCRemoteSwiftPackageReference "Resolver" */,
-				CE4593432BE896A70031FB59 /* XCRemoteSwiftPackageReference "ios" */,
 				CE1EFC0F2BEA514A002EA59B /* XCRemoteSwiftPackageReference "ios-service-routing" */,
+				CE1CE7142C086B87006F6468 /* XCLocalSwiftPackageReference "../../Новая папка/Architecture" */,
 			);
 			productRefGroup = CE6663CB2BE35AE700514E86 /* Products */;
 			projectDirPath = "";
@@ -793,20 +796,19 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		CE1CE7142C086B87006F6468 /* XCLocalSwiftPackageReference "../../Новая папка/Architecture" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../Новая папка/Architecture";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		CE1EFC0F2BEA514A002EA59B /* XCRemoteSwiftPackageReference "ios-service-routing" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitlab.akbars.tech/abo/ios-service-routing";
 			requirement = {
 				branch = main;
-				kind = branch;
-			};
-		};
-		CE4593432BE896A70031FB59 /* XCRemoteSwiftPackageReference "ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.akbars.tech/abo/ios.architecture";
-			requirement = {
-				branch = "vesion-1.1";
 				kind = branch;
 			};
 		};
@@ -829,15 +831,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE1CE7152C086B87006F6468 /* Architecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Architecture;
+		};
 		CE1EFC102BEA514A002EA59B /* Router */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE1EFC0F2BEA514A002EA59B /* XCRemoteSwiftPackageReference "ios-service-routing" */;
 			productName = Router;
-		};
-		CE4593442BE896A70031FB59 /* Architecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE4593432BE896A70031FB59 /* XCRemoteSwiftPackageReference "ios" */;
-			productName = Architecture;
 		};
 		CE45936B2BE8FE940031FB59 /* Router */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -852,6 +853,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE66640B2BE3665D00514E86 /* XCRemoteSwiftPackageReference "Resolver" */;
 			productName = Resolver;
+		};
+		CE668F8D2BEB585800827E64 /* Architecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Architecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
