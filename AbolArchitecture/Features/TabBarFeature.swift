@@ -39,9 +39,9 @@ final class TabBarFeature: FeatureCoordinatorProtocol {
             viewDidAppear: {},
             viewControllers: viewControllers,
             selectedIndex: 0,
-            tintColor: .green,
-            barTintColor: .green,
-            backgroundColor: .green
+            tintColor: .blue,
+            barTintColor: .black,
+            backgroundColor: .white
         )
         return vp
     }

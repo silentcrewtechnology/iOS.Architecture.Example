@@ -15,17 +15,23 @@ final class StartFlowCoordinator: RootCoordinatorProtocol {
     private let tabBarFeature: FeatureCoordinatorProtocol
     private var startFeature: FeatureCoordinatorProtocol
     private let profileFeature: FeatureCoordinatorProtocol
+    private let mainFeature: FeatureCoordinatorProtocol
+    private let textFIeldFeature: FeatureCoordinatorProtocol
     
     init(
         routerService: RouterService,
         tabBarFeature: TabBarFeature,
         startFeature: StartFeature,
-        profileFeature: ProfileFeature
+        profileFeature: ProfileFeature,
+        mainFeature: MainFeature,
+        textFIeldFeature: TextFIeldFeature
     ) {
         self.routerService = routerService
         self.tabBarFeature = tabBarFeature
         self.startFeature = startFeature
         self.profileFeature = profileFeature
+        self.mainFeature = mainFeature
+        self.textFIeldFeature = textFIeldFeature
     }
     
     func setRoot() {
@@ -37,6 +43,12 @@ final class StartFlowCoordinator: RootCoordinatorProtocol {
         startFeature.runNewFlow = { [weak self] flow in
             guard let self = self else { return }
             var viewControllers: [UIViewController] = []
+            
+            guard let mainBuilder = self.mainFeature.runFlow(data: nil) else { return }
+            viewControllers.append(mainBuilder.view as! UIViewController)
+            
+            guard let textFIeldBuilder = self.textFIeldFeature.runFlow(data: nil) else { return }
+            viewControllers.append(textFIeldBuilder.view as! UIViewController)
             
             guard let profileBuilder = self.profileFeature.runFlow(data: nil) else { return }
             viewControllers.append(profileBuilder.view as! UIViewController)

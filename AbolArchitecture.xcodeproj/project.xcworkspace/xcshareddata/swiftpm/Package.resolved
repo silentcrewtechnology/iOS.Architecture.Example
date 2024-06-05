@@ -1,5 +1,24 @@
 {
+  "originHash" : "7bbf095d5f811748ab6894f1e341eea4edda372f4af542b3f211f06e183d2339",
   "pins" : [
+    {
+      "identity" : "ios-architecture-table",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.akbars.tech/abo/ios-architecture-table",
+      "state" : {
+        "revision" : "5a27f9eaec7411e39ad06ff0458455f22ac95e6d",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "ios-extensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.akbars.tech/abo/ios-extensions",
+      "state" : {
+        "revision" : "2612146aa2bc4f91da66e393d626a09af85eef21",
+        "version" : "0.0.3"
+      }
+    },
     {
       "identity" : "ios-resources-colors",
       "kind" : "remoteSourceControl",
@@ -23,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://gitlab.akbars.tech/abo/ios-resources-icons.git",
       "state" : {
-        "revision" : "d6da23cff2c9b4c569cff3146e360057ef1a2445",
-        "version" : "0.0.2"
+        "revision" : "897bdd766c4136e337ae2305525f91d81b70ec23",
+        "version" : "0.0.3"
       }
     },
     {
@@ -32,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://gitlab.akbars.tech/abo/ios-resources-ui-components.git",
       "state" : {
-        "revision" : "ee42473b85ae79ce244dca95e16f4626a1c36f88",
-        "version" : "0.0.40"
+        "revision" : "1e2b443793459406852ac09227d21f188ce18f67",
+        "version" : "3.4.0"
       }
     },
     {
@@ -46,12 +65,21 @@
       }
     },
     {
+      "identity" : "ios.architecture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.akbars.tech/abo/ios.architecture",
+      "state" : {
+        "revision" : "7658812fc6d295c5207c24a0d853e53606d7cde8",
+        "version" : "0.0.6"
+      }
+    },
+    {
       "identity" : "ios.designsystem",
       "kind" : "remoteSourceControl",
       "location" : "https://gitlab.akbars.tech/abo/ios.designsystem",
       "state" : {
-        "revision" : "2a0f1bcb7cf7e3290a92525a97bfc641541e4405",
-        "version" : "0.2.41"
+        "revision" : "9564e9ce7dea175507ec60b79a174a757ad3d40b",
+        "version" : "3.3.0"
       }
     },
     {
@@ -73,5 +101,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

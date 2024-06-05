@@ -25,10 +25,8 @@ final class StartFeature: FeatureCoordinatorProtocol {
     }
     
     private func openTabBar() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.runNewFlow?(StartFlow.tabBar)
         }
     }
 }
-
-
