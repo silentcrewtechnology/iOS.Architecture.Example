@@ -22,24 +22,35 @@ extension Resolver: ResolverRegistering {
     
     private static func registerCoordinators(){
         Resolver.register {
-            FlowsCoordinator(
+            MainCoordinator(
                 startFlowCoordinator: Resolver.resolve(),
-                tabBarFlowCoordinator: Resolver.resolve())
-        }.implements(FlowsCoordinatorProtocol.self)
+                tabBarFlowCoordinator: Resolver.resolve(),
+                textFieldFlowCoordinator: Resolver.resolve()
+            )
+        }.implements(MainCoordinatorProtocol.self)
         
         Resolver.register {
             StartFlowCoordinator(
                 routerService: Resolver.resolve(),
-                tabBarFeature: Resolver.resolve(),
-                startFeature: Resolver.resolve(),
-                profileFeature: Resolver.resolve(), 
-                mainFeature: Resolver.resolve(),
-                textFIeldFeature: Resolver.resolve()
+                startFeature: Resolver.resolve()
             )
         }.implements(RootCoordinatorProtocol.self)
         
         Resolver.register {
-            TabBarFlowCoordinator()
+            TextFieldFlowCoordinator(
+                routerService: Resolver.resolve(),
+                textFieldFeature: Resolver.resolve()
+            )
+        }.implements(CoordinatorProtocol.self)
+        
+        Resolver.register {
+            TabBarFlowCoordinator(
+                routerService: Resolver.resolve(),
+                tabBarFeature: Resolver.resolve(),
+                startFeature: Resolver.resolve(),
+                profileFeature: Resolver.resolve(),
+                mainFeature: Resolver.resolve()
+            )
         }.implements(CoordinatorProtocol.self)
     }
     

@@ -50,8 +50,9 @@ final class MainFeature: FeatureCoordinatorProtocol {
     }
     
     private func setCell() {
+        // получилии с бека
         let leading = DSRowBlocks.atom(.image40(.ic24House, nil))
-        let center1 = DSRowBlocks.atom(.title("componentCell1", nil))
+        let center1 = DSRowBlocks.atom(.title("Text Field", nil))
         let center2 = DSRowBlocks.atom(.title("componentCell2", nil))
         let center3 = DSRowBlocks.atom(.title("componentCell3", nil))
         
@@ -59,7 +60,7 @@ final class MainFeature: FeatureCoordinatorProtocol {
             leading: leading,
             center: center1,
             tap: { [ weak self] in
-               
+                self?.runNewFlow?(MainFlow.textField)
             }
         )
         let componentCell2 = MainComponentCell.button(
@@ -78,6 +79,7 @@ final class MainFeature: FeatureCoordinatorProtocol {
         )
         let cells = [componentCell1, componentCell2, componentCell3]
         mainTableDataSource.update(with: cells)
+        tableViewBuilder.viewUpdater.state = .reloadData
     }
 }
 

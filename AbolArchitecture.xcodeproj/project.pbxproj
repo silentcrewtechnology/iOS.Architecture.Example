@@ -11,7 +11,7 @@
 		CE1EFC112BEA514A002EA59B /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = CE1EFC102BEA514A002EA59B /* Router */; };
 		CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593102BE873640031FB59 /* TabBarVC.swift */; };
 		CE4593222BE87BB30031FB59 /* StartFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593212BE87BB30031FB59 /* StartFeature.swift */; };
-		CE4593252BE87C5E0031FB59 /* FlowsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593242BE87C5E0031FB59 /* FlowsCoordinator.swift */; };
+		CE4593252BE87C5E0031FB59 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593242BE87C5E0031FB59 /* MainCoordinator.swift */; };
 		CE4593272BE87C9D0031FB59 /* StartFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593262BE87C9D0031FB59 /* StartFlowCoordinator.swift */; };
 		CE4593292BE87D0C0031FB59 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593282BE87D0C0031FB59 /* TabBarFlowCoordinator.swift */; };
 		CE45932B2BE87D880031FB59 /* TabBarFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45932A2BE87D880031FB59 /* TabBarFeature.swift */; };
@@ -26,7 +26,6 @@
 		CE4593402BE890FA0031FB59 /* ProfileVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45933F2BE890FA0031FB59 /* ProfileVCBuilder.swift */; };
 		CE4593422BE891190031FB59 /* ProfileVCUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593412BE891190031FB59 /* ProfileVCUpdater.swift */; };
 		CE45936C2BE8FE940031FB59 /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = CE45936B2BE8FE940031FB59 /* Router */; };
-		CE46CD402C0F0BDB00A63F64 /* ArchitectureTableView in Frameworks */ = {isa = PBXBuildFile; productRef = CE46CD3F2C0F0BDB00A63F64 /* ArchitectureTableView */; };
 		CE46CD422C0F0C6900A63F64 /* MainVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD412C0F0C6900A63F64 /* MainVCBuilder.swift */; };
 		CE46CD442C0F0CA600A63F64 /* MainVCUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD432C0F0CA600A63F64 /* MainVCUpdater.swift */; };
 		CE46CD472C0F0CEA00A63F64 /* MainFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD462C0F0CEA00A63F64 /* MainFeature.swift */; };
@@ -53,6 +52,10 @@
 		CE66640D2BE3665D00514E86 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = CE66640C2BE3665D00514E86 /* Resolver */; };
 		CE6664102BE3667800514E86 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66640F2BE3667800514E86 /* Dependency.swift */; };
 		CE668F8E2BEB585800827E64 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE668F8D2BEB585800827E64 /* Architecture */; };
+		CE7C33302C49025E0077ABC1 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE7C332F2C49025E0077ABC1 /* Architecture */; };
+		CE7C33332C490AB30077ABC1 /* BottomSheetService in Frameworks */ = {isa = PBXBuildFile; productRef = CE7C33322C490AB30077ABC1 /* BottomSheetService */; };
+		CEAB43452C4A34A1001E4C7D /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB43442C4A34A1001E4C7D /* MainFlow.swift */; };
+		CEAB43472C4A3688001E4C7D /* TextFieldFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB43462C4A3688001E4C7D /* TextFieldFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +78,7 @@
 /* Begin PBXFileReference section */
 		CE4593102BE873640031FB59 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		CE4593212BE87BB30031FB59 /* StartFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFeature.swift; sourceTree = "<group>"; };
-		CE4593242BE87C5E0031FB59 /* FlowsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowsCoordinator.swift; sourceTree = "<group>"; };
+		CE4593242BE87C5E0031FB59 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		CE4593262BE87C9D0031FB59 /* StartFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFlowCoordinator.swift; sourceTree = "<group>"; };
 		CE4593282BE87D0C0031FB59 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
 		CE45932A2BE87D880031FB59 /* TabBarFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFeature.swift; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 		CE6663F02BE35AE900514E86 /* ArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE6664052BE3605200514E86 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		CE66640F2BE3667800514E86 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		CEAB43442C4A34A1001E4C7D /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
+		CEAB43462C4A3688001E4C7D /* TextFieldFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldFlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +129,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1EFC112BEA514A002EA59B /* Router in Frameworks */,
+				CE7C33332C490AB30077ABC1 /* BottomSheetService in Frameworks */,
 				CE66640D2BE3665D00514E86 /* Resolver in Frameworks */,
 				CE1CE7162C086B87006F6468 /* Architecture in Frameworks */,
 				CE45936C2BE8FE940031FB59 /* Router in Frameworks */,
+				CE7C33302C49025E0077ABC1 /* Architecture in Frameworks */,
 				CE668F8E2BEB585800827E64 /* Architecture in Frameworks */,
 				CE46CD5A2C0F226700A63F64 /* Extensions in Frameworks */,
-				CE46CD402C0F0BDB00A63F64 /* ArchitectureTableView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,9 +200,10 @@
 		CE4593232BE87C460031FB59 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				CE4593242BE87C5E0031FB59 /* FlowsCoordinator.swift */,
+				CE4593242BE87C5E0031FB59 /* MainCoordinator.swift */,
 				CE4593262BE87C9D0031FB59 /* StartFlowCoordinator.swift */,
 				CE4593282BE87D0C0031FB59 /* TabBarFlowCoordinator.swift */,
+				CEAB43462C4A3688001E4C7D /* TextFieldFlowCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				CE46CD462C0F0CEA00A63F64 /* MainFeature.swift */,
+				CEAB43442C4A34A1001E4C7D /* MainFlow.swift */,
 			);
 			path = MainFeature;
 			sourceTree = "<group>";
@@ -397,8 +405,9 @@
 				CE1EFC102BEA514A002EA59B /* Router */,
 				CE668F8D2BEB585800827E64 /* Architecture */,
 				CE1CE7152C086B87006F6468 /* Architecture */,
-				CE46CD3F2C0F0BDB00A63F64 /* ArchitectureTableView */,
 				CE46CD592C0F226700A63F64 /* Extensions */,
+				CE7C332F2C49025E0077ABC1 /* Architecture */,
+				CE7C33322C490AB30077ABC1 /* BottomSheetService */,
 			);
 			productName = Architecture;
 			productReference = CE6663CA2BE35AE700514E86 /* AbolArchitecture.app */;
@@ -475,8 +484,9 @@
 			packageReferences = (
 				CE66640B2BE3665D00514E86 /* XCRemoteSwiftPackageReference "Resolver" */,
 				CE1EFC0F2BEA514A002EA59B /* XCRemoteSwiftPackageReference "ios-service-routing" */,
-				CE46CD3E2C0F0BDB00A63F64 /* XCRemoteSwiftPackageReference "ios-architecture-table" */,
 				CE46CD582C0F226700A63F64 /* XCRemoteSwiftPackageReference "ios-extensions" */,
+				CE7C332E2C49025E0077ABC1 /* XCRemoteSwiftPackageReference "ios" */,
+				CE7C33312C490AB30077ABC1 /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */,
 			);
 			productRefGroup = CE6663CB2BE35AE700514E86 /* Products */;
 			projectDirPath = "";
@@ -526,7 +536,7 @@
 				CE46CD4C2C0F11D300A63F64 /* MainTableDelegate.swift in Sources */,
 				CE4593342BE884FE0031FB59 /* StartVC.swift in Sources */,
 				CE45932F2BE87E2A0031FB59 /* TabBarVCUpdater.swift in Sources */,
-				CE4593252BE87C5E0031FB59 /* FlowsCoordinator.swift in Sources */,
+				CE4593252BE87C5E0031FB59 /* MainCoordinator.swift in Sources */,
 				CE46CD642C10883E00A63F64 /* TextFIeldFeature.swift in Sources */,
 				CE4593272BE87C9D0031FB59 /* StartFlowCoordinator.swift in Sources */,
 				CE6663CE2BE35AE700514E86 /* AppDelegate.swift in Sources */,
@@ -535,8 +545,10 @@
 				CE4593382BE885330031FB59 /* StartVCUpdater.swift in Sources */,
 				CE4593402BE890FA0031FB59 /* ProfileVCBuilder.swift in Sources */,
 				CE46CD5F2C104B7600A63F64 /* TextFieldVCBuilder.swift in Sources */,
+				CEAB43452C4A34A1001E4C7D /* MainFlow.swift in Sources */,
 				CE4593362BE8851F0031FB59 /* StartVCBuilder.swift in Sources */,
 				CE4593292BE87D0C0031FB59 /* TabBarFlowCoordinator.swift in Sources */,
+				CEAB43472C4A3688001E4C7D /* TextFieldFlowCoordinator.swift in Sources */,
 				CE46CD612C104BB800A63F64 /* TextFieldVCUpdater.swift in Sources */,
 				CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */,
 				CE46CD422C0F0C6900A63F64 /* MainVCBuilder.swift in Sources */,
@@ -900,14 +912,6 @@
 				kind = branch;
 			};
 		};
-		CE46CD3E2C0F0BDB00A63F64 /* XCRemoteSwiftPackageReference "ios-architecture-table" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.akbars.tech/abo/ios-architecture-table";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
-			};
-		};
 		CE46CD582C0F226700A63F64 /* XCRemoteSwiftPackageReference "ios-extensions" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://gitlab.akbars.tech/abo/ios-extensions";
@@ -922,6 +926,22 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.5.1;
+			};
+		};
+		CE7C332E2C49025E0077ABC1 /* XCRemoteSwiftPackageReference "ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitlab.akbars.tech/abo/ios.architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		CE7C33312C490AB30077ABC1 /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitlab.akbars.tech/abo/ios-resources-bottom-sheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -940,11 +960,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Router;
 		};
-		CE46CD3F2C0F0BDB00A63F64 /* ArchitectureTableView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE46CD3E2C0F0BDB00A63F64 /* XCRemoteSwiftPackageReference "ios-architecture-table" */;
-			productName = ArchitectureTableView;
-		};
 		CE46CD592C0F226700A63F64 /* Extensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE46CD582C0F226700A63F64 /* XCRemoteSwiftPackageReference "ios-extensions" */;
@@ -958,6 +973,16 @@
 		CE668F8D2BEB585800827E64 /* Architecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Architecture;
+		};
+		CE7C332F2C49025E0077ABC1 /* Architecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE7C332E2C49025E0077ABC1 /* XCRemoteSwiftPackageReference "ios" */;
+			productName = Architecture;
+		};
+		CE7C33322C490AB30077ABC1 /* BottomSheetService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE7C33312C490AB30077ABC1 /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */;
+			productName = BottomSheetService;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
