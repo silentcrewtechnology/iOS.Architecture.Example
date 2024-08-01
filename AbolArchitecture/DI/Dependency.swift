@@ -32,7 +32,9 @@ extension Resolver: ResolverRegistering {
                 routerService: Resolver.resolve(),
                 tabBarFeature: Resolver.resolve(),
                 startFeature: Resolver.resolve(),
-                profileFeature: Resolver.resolve()
+                profileFeature: Resolver.resolve(), 
+                mainFeature: Resolver.resolve(),
+                textFIeldFeature: Resolver.resolve()
             )
         }.implements(RootCoordinatorProtocol.self)
         
@@ -67,6 +69,14 @@ extension Resolver: ResolverRegistering {
                 profileVCBuilder: Resolver.resolve(args: ProfileVC.ViewProperties())
             )
         }.implements(FeatureCoordinatorProtocol.self)
+        
+        Resolver.register {
+            MainFeature()
+        }.implements(FeatureCoordinatorProtocol.self)
+        
+        Resolver.register {
+            TextFIeldFeature()
+        }.implements(FeatureCoordinatorProtocol.self)
     }
     
     private static func application() {
@@ -83,6 +93,10 @@ extension Resolver: ResolverRegistering {
         
         Resolver.register { (_, args) in
             ProfileVCBuilder(with: args())
+        }
+        
+        Resolver.register { (_, args) in
+            TextFieldVCBuilder(with: args())
         }
     }
 }

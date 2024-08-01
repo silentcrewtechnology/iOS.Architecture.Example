@@ -81,6 +81,8 @@ public final class TabBarVC: UITabBarController, ViewProtocol {
     public func update(with viewProperties: ViewProperties) {
         self.viewProperties = viewProperties
         setIndex(with: viewProperties)
+        setViewControllers(with: viewProperties)
+        setupTabBar(with: viewProperties)
     }
     
     private func setIndex(with viewProperties: ViewProperties?){

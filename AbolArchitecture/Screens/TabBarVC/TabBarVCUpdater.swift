@@ -24,9 +24,9 @@ final class TabBarVCUpdater: ViewUpdater<TabBarVC> {
     private func stateManager(){
         guard let state = self.state else { return }
         switch state {
-            case .setSelectedIndex(let selectedIndex):
-                self.viewProperties.selectedIndex = selectedIndex
-                self.update(self.viewProperties)
+        case .setSelectedIndex(let selectedIndex):
+            self.viewProperties.selectedIndex = selectedIndex
+            self.update(self.viewProperties)
             
         case .setViewProperties(let viewProperties):
             self.viewProperties = viewProperties

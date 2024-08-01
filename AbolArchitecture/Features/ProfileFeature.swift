@@ -20,6 +20,7 @@ final class ProfileFeature: FeatureCoordinatorProtocol {
     var runNewFlow: ((Any) -> Void)?
     
     func runFlow(data: Any?) -> (any BuilderProtocol)? {
+        profileVCBuilder.view.setTabBar(with: .profile)
         return profileVCBuilder
     }
 }
