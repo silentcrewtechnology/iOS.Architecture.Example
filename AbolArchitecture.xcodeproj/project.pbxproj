@@ -34,8 +34,6 @@
 		CE46CD422C0F0C6900A63F64 /* MainVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD412C0F0C6900A63F64 /* MainVCBuilder.swift */; };
 		CE46CD442C0F0CA600A63F64 /* MainVCUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD432C0F0CA600A63F64 /* MainVCUpdater.swift */; };
 		CE46CD472C0F0CEA00A63F64 /* MainFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD462C0F0CEA00A63F64 /* MainFeature.swift */; };
-		CE46CD4A2C0F116D00A63F64 /* MainTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD492C0F116D00A63F64 /* MainTableDataSource.swift */; };
-		CE46CD4C2C0F11D300A63F64 /* MainTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD4B2C0F11D300A63F64 /* MainTableDelegate.swift */; };
 		CE46CD502C0F161400A63F64 /* TabBarVCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD4E2C0F161400A63F64 /* TabBarVCService.swift */; };
 		CE46CD552C0F166700A63F64 /* Extension + Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD512C0F166700A63F64 /* Extension + Strings.swift */; };
 		CE46CD562C0F166700A63F64 /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD522C0F166700A63F64 /* Extension + UIView.swift */; };
@@ -105,8 +103,6 @@
 		CE46CD412C0F0C6900A63F64 /* MainVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCBuilder.swift; sourceTree = "<group>"; };
 		CE46CD432C0F0CA600A63F64 /* MainVCUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCUpdater.swift; sourceTree = "<group>"; };
 		CE46CD462C0F0CEA00A63F64 /* MainFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeature.swift; sourceTree = "<group>"; };
-		CE46CD492C0F116D00A63F64 /* MainTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableDataSource.swift; sourceTree = "<group>"; };
-		CE46CD4B2C0F11D300A63F64 /* MainTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableDelegate.swift; sourceTree = "<group>"; };
 		CE46CD4E2C0F161400A63F64 /* TabBarVCService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVCService.swift; sourceTree = "<group>"; };
 		CE46CD512C0F166700A63F64 /* Extension + Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + Strings.swift"; sourceTree = "<group>"; };
 		CE46CD522C0F166700A63F64 /* Extension + UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
@@ -271,8 +267,6 @@
 			children = (
 				CE46CD412C0F0C6900A63F64 /* MainVCBuilder.swift */,
 				CE46CD432C0F0CA600A63F64 /* MainVCUpdater.swift */,
-				CE46CD492C0F116D00A63F64 /* MainTableDataSource.swift */,
-				CE46CD4B2C0F11D300A63F64 /* MainTableDelegate.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -564,7 +558,6 @@
 			files = (
 				CE45933E2BE890E00031FB59 /* ProfileVC.swift in Sources */,
 				CE45932E2BE87E2A0031FB59 /* TabBarVCBuilder.swift in Sources */,
-				CE46CD4C2C0F11D300A63F64 /* MainTableDelegate.swift in Sources */,
 				CE4593342BE884FE0031FB59 /* StartVC.swift in Sources */,
 				CE45932F2BE87E2A0031FB59 /* TabBarVCUpdater.swift in Sources */,
 				CE258F182C6C9BE100448302 /* TableDelegate.swift in Sources */,
@@ -587,7 +580,6 @@
 				CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */,
 				CE46CD422C0F0C6900A63F64 /* MainVCBuilder.swift in Sources */,
 				CE46CD442C0F0CA600A63F64 /* MainVCUpdater.swift in Sources */,
-				CE46CD4A2C0F116D00A63F64 /* MainTableDataSource.swift in Sources */,
 				CE46CD552C0F166700A63F64 /* Extension + Strings.swift in Sources */,
 				CE46CD472C0F0CEA00A63F64 /* MainFeature.swift in Sources */,
 				CE46CD5D2C104B3100A63F64 /* TextFieldVC.swift in Sources */,
