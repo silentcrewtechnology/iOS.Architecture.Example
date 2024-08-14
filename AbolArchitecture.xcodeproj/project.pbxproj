@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		CE1CE7162C086B87006F6468 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE1CE7152C086B87006F6468 /* Architecture */; };
 		CE1EFC112BEA514A002EA59B /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = CE1EFC102BEA514A002EA59B /* Router */; };
+		CE258F162C6C9BCF00448302 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F152C6C9BCF00448302 /* TableDataSource.swift */; };
+		CE258F182C6C9BE100448302 /* TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F172C6C9BE100448302 /* TableDelegate.swift */; };
+		CE258F1A2C6CA77400448302 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F192C6CA77400448302 /* TableCell.swift */; };
+		CE258F1C2C6CA79600448302 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F1B2C6CA79600448302 /* Section.swift */; };
+		CE258F1E2C6CA7AE00448302 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F1D2C6CA7AE00448302 /* Extension.swift */; };
+		CE258F202C6CA7C300448302 /* ContainerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F1F2C6CA7C300448302 /* ContainerTableCell.swift */; };
 		CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593102BE873640031FB59 /* TabBarVC.swift */; };
 		CE4593222BE87BB30031FB59 /* StartFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593212BE87BB30031FB59 /* StartFeature.swift */; };
 		CE4593252BE87C5E0031FB59 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593242BE87C5E0031FB59 /* MainCoordinator.swift */; };
@@ -76,6 +82,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE258F152C6C9BCF00448302 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
+		CE258F172C6C9BE100448302 /* TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDelegate.swift; sourceTree = "<group>"; };
+		CE258F192C6CA77400448302 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		CE258F1B2C6CA79600448302 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		CE258F1D2C6CA7AE00448302 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CE258F1F2C6CA7C300448302 /* ContainerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableCell.swift; sourceTree = "<group>"; };
 		CE4593102BE873640031FB59 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		CE4593212BE87BB30031FB59 /* StartFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFeature.swift; sourceTree = "<group>"; };
 		CE4593242BE87C5E0031FB59 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -156,6 +168,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE258F132C6C9ADF00448302 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CE258F142C6C9BB300448302 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				CE258F152C6C9BCF00448302 /* TableDataSource.swift */,
+				CE258F172C6C9BE100448302 /* TableDelegate.swift */,
+				CE258F192C6CA77400448302 /* TableCell.swift */,
+				CE258F1B2C6CA79600448302 /* Section.swift */,
+				CE258F1D2C6CA7AE00448302 /* Extension.swift */,
+				CE258F1F2C6CA7C300448302 /* ContainerTableCell.swift */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
 		CE4593122BE873690031FB59 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +292,7 @@
 		CE46CD4D2C0F160400A63F64 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CE258F142C6C9BB300448302 /* Table */,
 				CE46CD4F2C0F161400A63F64 /* TabBarService */,
 			);
 			path = Services;
@@ -326,6 +359,7 @@
 		CE6663CC2BE35AE700514E86 /* AbolArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				CE258F132C6C9ADF00448302 /* New Group */,
 				CE46CD542C0F166700A63F64 /* Extensions */,
 				CE46CD4D2C0F160400A63F64 /* Services */,
 				CE4593232BE87C460031FB59 /* Coordinator */,
@@ -536,19 +570,23 @@
 				CE46CD4C2C0F11D300A63F64 /* MainTableDelegate.swift in Sources */,
 				CE4593342BE884FE0031FB59 /* StartVC.swift in Sources */,
 				CE45932F2BE87E2A0031FB59 /* TabBarVCUpdater.swift in Sources */,
+				CE258F182C6C9BE100448302 /* TableDelegate.swift in Sources */,
 				CE4593252BE87C5E0031FB59 /* MainCoordinator.swift in Sources */,
 				CE46CD642C10883E00A63F64 /* TextFIeldFeature.swift in Sources */,
+				CE258F162C6C9BCF00448302 /* TableDataSource.swift in Sources */,
 				CE4593272BE87C9D0031FB59 /* StartFlowCoordinator.swift in Sources */,
 				CE6663CE2BE35AE700514E86 /* AppDelegate.swift in Sources */,
 				CE4593422BE891190031FB59 /* ProfileVCUpdater.swift in Sources */,
 				CE46CD502C0F161400A63F64 /* TabBarVCService.swift in Sources */,
 				CE4593382BE885330031FB59 /* StartVCUpdater.swift in Sources */,
 				CE4593402BE890FA0031FB59 /* ProfileVCBuilder.swift in Sources */,
+				CE258F1E2C6CA7AE00448302 /* Extension.swift in Sources */,
 				CE46CD5F2C104B7600A63F64 /* TextFieldVCBuilder.swift in Sources */,
 				CEAB43452C4A34A1001E4C7D /* MainFlow.swift in Sources */,
 				CE4593362BE8851F0031FB59 /* StartVCBuilder.swift in Sources */,
 				CE4593292BE87D0C0031FB59 /* TabBarFlowCoordinator.swift in Sources */,
 				CEAB43472C4A3688001E4C7D /* TextFieldFlowCoordinator.swift in Sources */,
+				CE258F1A2C6CA77400448302 /* TableCell.swift in Sources */,
 				CE46CD612C104BB800A63F64 /* TextFieldVCUpdater.swift in Sources */,
 				CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */,
 				CE46CD422C0F0C6900A63F64 /* MainVCBuilder.swift in Sources */,
@@ -558,9 +596,11 @@
 				CE46CD472C0F0CEA00A63F64 /* MainFeature.swift in Sources */,
 				CE46CD5D2C104B3100A63F64 /* TextFieldVC.swift in Sources */,
 				CE6664102BE3667800514E86 /* Dependency.swift in Sources */,
+				CE258F202C6CA7C300448302 /* ContainerTableCell.swift in Sources */,
 				CE4593312BE8801C0031FB59 /* ProfileFeature.swift in Sources */,
 				CE46CD662C1091B000A63F64 /* TextFieldDelegate.swift in Sources */,
 				CE4593222BE87BB30031FB59 /* StartFeature.swift in Sources */,
+				CE258F1C2C6CA79600448302 /* Section.swift in Sources */,
 				CE46CD562C0F166700A63F64 /* Extension + UIView.swift in Sources */,
 				CE46CD572C0F166700A63F64 /* Extension + UIViewController.swift in Sources */,
 				CE45933B2BE88C350031FB59 /* StartFlow.swift in Sources */,
@@ -933,7 +973,7 @@
 			repositoryURL = "https://gitlab.akbars.tech/abo/ios.architecture";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 3.0.0;
 			};
 		};
 		CE7C33312C490AB30077ABC1 /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */ = {
@@ -941,7 +981,7 @@
 			repositoryURL = "https://gitlab.akbars.tech/abo/ios-resources-bottom-sheet";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 8.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

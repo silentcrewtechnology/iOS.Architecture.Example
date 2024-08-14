@@ -29,13 +29,13 @@ struct MainCoordinator: MainCoordinatorProtocol {
     
     func setupCoordinatorsFlow() {
         startFlowCoordinator.setupFlow(completion: { _ in
-            tabBarFlowCoordinator.startFlow()
+            tabBarFlowCoordinator.startFlow(data: nil)
         })
         
         tabBarFlowCoordinator.setupFlow(completion: { flow in
             switch flow as? MainFlow {
             case .textField:
-                textFieldFlowCoordinator.startFlow()
+                textFieldFlowCoordinator.startFlow(data: nil)
             default:
                 break
             }

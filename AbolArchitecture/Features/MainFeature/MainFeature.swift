@@ -14,26 +14,25 @@ final class MainFeature: FeatureCoordinatorProtocol {
     
     private let mainVCBuilder: MainVCBuilder
     private let tableViewBuilder: TableViewBuilder
-    private let mainTableDataSource: MainTableDataSource
-    private let mainTableDelegate: MainTableDelegate
+    private let tableDataSource: TableDataSource
+    private let tableDelegate: TableDelegate
     
     init() {
-        self.mainTableDataSource = MainTableDataSource()
-        self.mainTableDelegate = MainTableDelegate()
+        self.tableDataSource = TableDataSource()
+        self.tableDelegate = TableDelegate()
         self.tableViewBuilder = TableViewBuilder(
             with: .init(
                 allowsSelection: false,
                 separatorColor: .clear,
                 backgroundColor: .clear,
                 separatorInset: .zero,
-                dataSources: self.mainTableDataSource,
-                delegate: self.mainTableDelegate,
+                dataSources: self.tableDataSource,
+                delegate: self.tableDelegate,
                 didTapGesture: {}
             )
         )
         self.mainVCBuilder = MainVCBuilder(
             with: .init(
-                screenTitle: "",
                 tableView: self.tableViewBuilder.view,
                 confirmButtonView: nil, 
                 activityIndicator: nil
@@ -56,29 +55,46 @@ final class MainFeature: FeatureCoordinatorProtocol {
         let center2 = DSRowBlocks.atom(.title("componentCell2", nil))
         let center3 = DSRowBlocks.atom(.title("componentCell3", nil))
         
-        let componentCell1 = MainComponentCell.button(
+        let componentCell1 = TableCell.iconTitle(
             leading: leading,
             center: center1,
             tap: { [ weak self] in
                 self?.runNewFlow?(MainFlow.textField)
             }
         )
-        let componentCell2 = MainComponentCell.button(
+        let componentCell2 = TableCell.iconTitle(
             leading: leading,
             center: center2,
             tap: { [ weak self] in
                
             }
         )
-        let componentCell3 = MainComponentCell.button(
+        let componentCell3 = TableCell.iconTitle(
             leading: leading,
             center: center3,
             tap: { [ weak self] in
                
             }
         )
-        let cells = [componentCell1, componentCell2, componentCell3]
-        mainTableDataSource.update(with: cells)
+        
+        let row1 = Row(
+            view: componentCell1.cell(),
+            selectionStyle: .blue,
+            height: 60
+        )
+        let row2 = Row(
+            view: componentCell2.cell(),
+            selectionStyle: .blue,
+            height: 60
+        )
+        let row3 = Row(
+            view: componentCell3.cell(),
+            selectionStyle: .blue,
+            height: 60
+        )
+        let section = Section(rows: [row1, row2, row3])
+        tableDataSource.update(with: [section])
+        tableDelegate.update(with: [section])
         tableViewBuilder.viewUpdater.state = .reloadData
     }
 }
