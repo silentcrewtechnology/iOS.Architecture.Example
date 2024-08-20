@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348C537E2C73980600ACEA5C /* BottomSheetService in Frameworks */ = {isa = PBXBuildFile; productRef = 348C537D2C73980600ACEA5C /* BottomSheetService */; };
+		348C53812C73982100ACEA5C /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 348C53802C73982100ACEA5C /* Resolver */; };
+		348C53842C73983000ACEA5C /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = 348C53832C73983000ACEA5C /* Router */; };
 		CE1CE7162C086B87006F6468 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE1CE7152C086B87006F6468 /* Architecture */; };
-		CE1EFC112BEA514A002EA59B /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = CE1EFC102BEA514A002EA59B /* Router */; };
-		CE258F162C6C9BCF00448302 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F152C6C9BCF00448302 /* TableDataSource.swift */; };
-		CE258F182C6C9BE100448302 /* TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F172C6C9BE100448302 /* TableDelegate.swift */; };
-		CE258F1A2C6CA77400448302 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F192C6CA77400448302 /* TableCell.swift */; };
-		CE258F1C2C6CA79600448302 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F1B2C6CA79600448302 /* Section.swift */; };
-		CE258F202C6CA7C300448302 /* ContainerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE258F1F2C6CA7C300448302 /* ContainerTableCell.swift */; };
 		CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593102BE873640031FB59 /* TabBarVC.swift */; };
 		CE4593222BE87BB30031FB59 /* StartFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593212BE87BB30031FB59 /* StartFeature.swift */; };
 		CE4593252BE87C5E0031FB59 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593242BE87C5E0031FB59 /* MainCoordinator.swift */; };
@@ -38,7 +35,6 @@
 		CE46CD552C0F166700A63F64 /* Extension + Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD512C0F166700A63F64 /* Extension + Strings.swift */; };
 		CE46CD562C0F166700A63F64 /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD522C0F166700A63F64 /* Extension + UIView.swift */; };
 		CE46CD572C0F166700A63F64 /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD532C0F166700A63F64 /* Extension + UIViewController.swift */; };
-		CE46CD5A2C0F226700A63F64 /* Extensions in Frameworks */ = {isa = PBXBuildFile; productRef = CE46CD592C0F226700A63F64 /* Extensions */; };
 		CE46CD5D2C104B3100A63F64 /* TextFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD5C2C104B3100A63F64 /* TextFieldVC.swift */; };
 		CE46CD5F2C104B7600A63F64 /* TextFieldVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD5E2C104B7600A63F64 /* TextFieldVCBuilder.swift */; };
 		CE46CD612C104BB800A63F64 /* TextFieldVCUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD602C104BB800A63F64 /* TextFieldVCUpdater.swift */; };
@@ -52,11 +48,8 @@
 		CE6663EF2BE35AE900514E86 /* ArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6663EE2BE35AE900514E86 /* ArchitectureUITests.swift */; };
 		CE6663F12BE35AE900514E86 /* ArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6663F02BE35AE900514E86 /* ArchitectureUITestsLaunchTests.swift */; };
 		CE6664062BE3605200514E86 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = CE6664052BE3605200514E86 /* Readme.md */; };
-		CE66640D2BE3665D00514E86 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = CE66640C2BE3665D00514E86 /* Resolver */; };
 		CE6664102BE3667800514E86 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66640F2BE3667800514E86 /* Dependency.swift */; };
 		CE668F8E2BEB585800827E64 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE668F8D2BEB585800827E64 /* Architecture */; };
-		CE7C33302C49025E0077ABC1 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE7C332F2C49025E0077ABC1 /* Architecture */; };
-		CE7C33332C490AB30077ABC1 /* BottomSheetService in Frameworks */ = {isa = PBXBuildFile; productRef = CE7C33322C490AB30077ABC1 /* BottomSheetService */; };
 		CEAB43452C4A34A1001E4C7D /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB43442C4A34A1001E4C7D /* MainFlow.swift */; };
 		CEAB43472C4A3688001E4C7D /* TextFieldFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB43462C4A3688001E4C7D /* TextFieldFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -79,11 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE258F152C6C9BCF00448302 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
-		CE258F172C6C9BE100448302 /* TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDelegate.swift; sourceTree = "<group>"; };
-		CE258F192C6CA77400448302 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
-		CE258F1B2C6CA79600448302 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		CE258F1F2C6CA7C300448302 /* ContainerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableCell.swift; sourceTree = "<group>"; };
 		CE4593102BE873640031FB59 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		CE4593212BE87BB30031FB59 /* StartFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFeature.swift; sourceTree = "<group>"; };
 		CE4593242BE87C5E0031FB59 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -134,14 +122,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1EFC112BEA514A002EA59B /* Router in Frameworks */,
-				CE7C33332C490AB30077ABC1 /* BottomSheetService in Frameworks */,
-				CE66640D2BE3665D00514E86 /* Resolver in Frameworks */,
 				CE1CE7162C086B87006F6468 /* Architecture in Frameworks */,
+				348C53842C73983000ACEA5C /* Router in Frameworks */,
+				348C537E2C73980600ACEA5C /* BottomSheetService in Frameworks */,
 				CE45936C2BE8FE940031FB59 /* Router in Frameworks */,
-				CE7C33302C49025E0077ABC1 /* Architecture in Frameworks */,
+				348C53812C73982100ACEA5C /* Resolver in Frameworks */,
 				CE668F8E2BEB585800827E64 /* Architecture in Frameworks */,
-				CE46CD5A2C0F226700A63F64 /* Extensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,25 +148,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE258F132C6C9ADF00448302 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		CE258F142C6C9BB300448302 /* Table */ = {
-			isa = PBXGroup;
-			children = (
-				CE258F152C6C9BCF00448302 /* TableDataSource.swift */,
-				CE258F172C6C9BE100448302 /* TableDelegate.swift */,
-				CE258F192C6CA77400448302 /* TableCell.swift */,
-				CE258F1B2C6CA79600448302 /* Section.swift */,
-				CE258F1F2C6CA7C300448302 /* ContainerTableCell.swift */,
-			);
-			path = Table;
-			sourceTree = "<group>";
-		};
 		CE4593122BE873690031FB59 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,7 +250,6 @@
 		CE46CD4D2C0F160400A63F64 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CE258F142C6C9BB300448302 /* Table */,
 				CE46CD4F2C0F161400A63F64 /* TabBarService */,
 			);
 			path = Services;
@@ -350,7 +316,6 @@
 		CE6663CC2BE35AE700514E86 /* AbolArchitecture */ = {
 			isa = PBXGroup;
 			children = (
-				CE258F132C6C9ADF00448302 /* New Group */,
 				CE46CD542C0F166700A63F64 /* Extensions */,
 				CE46CD4D2C0F160400A63F64 /* Services */,
 				CE4593232BE87C460031FB59 /* Coordinator */,
@@ -425,14 +390,12 @@
 			);
 			name = AbolArchitecture;
 			packageProductDependencies = (
-				CE66640C2BE3665D00514E86 /* Resolver */,
 				CE45936B2BE8FE940031FB59 /* Router */,
-				CE1EFC102BEA514A002EA59B /* Router */,
 				CE668F8D2BEB585800827E64 /* Architecture */,
 				CE1CE7152C086B87006F6468 /* Architecture */,
-				CE46CD592C0F226700A63F64 /* Extensions */,
-				CE7C332F2C49025E0077ABC1 /* Architecture */,
-				CE7C33322C490AB30077ABC1 /* BottomSheetService */,
+				348C537D2C73980600ACEA5C /* BottomSheetService */,
+				348C53802C73982100ACEA5C /* Resolver */,
+				348C53832C73983000ACEA5C /* Router */,
 			);
 			productName = Architecture;
 			productReference = CE6663CA2BE35AE700514E86 /* AbolArchitecture.app */;
@@ -507,11 +470,9 @@
 			);
 			mainGroup = CE6663C12BE35AE700514E86;
 			packageReferences = (
-				CE66640B2BE3665D00514E86 /* XCRemoteSwiftPackageReference "Resolver" */,
-				CE1EFC0F2BEA514A002EA59B /* XCRemoteSwiftPackageReference "ios-service-routing" */,
-				CE46CD582C0F226700A63F64 /* XCRemoteSwiftPackageReference "ios-extensions" */,
-				CE7C332E2C49025E0077ABC1 /* XCRemoteSwiftPackageReference "ios" */,
-				CE7C33312C490AB30077ABC1 /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */,
+				348C537C2C73980600ACEA5C /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */,
+				348C537F2C73982100ACEA5C /* XCRemoteSwiftPackageReference "Resolver" */,
+				348C53822C73983000ACEA5C /* XCRemoteSwiftPackageReference "ios-service-routing" */,
 			);
 			productRefGroup = CE6663CB2BE35AE700514E86 /* Products */;
 			projectDirPath = "";
@@ -560,10 +521,8 @@
 				CE45932E2BE87E2A0031FB59 /* TabBarVCBuilder.swift in Sources */,
 				CE4593342BE884FE0031FB59 /* StartVC.swift in Sources */,
 				CE45932F2BE87E2A0031FB59 /* TabBarVCUpdater.swift in Sources */,
-				CE258F182C6C9BE100448302 /* TableDelegate.swift in Sources */,
 				CE4593252BE87C5E0031FB59 /* MainCoordinator.swift in Sources */,
 				CE46CD642C10883E00A63F64 /* TextFIeldFeature.swift in Sources */,
-				CE258F162C6C9BCF00448302 /* TableDataSource.swift in Sources */,
 				CE4593272BE87C9D0031FB59 /* StartFlowCoordinator.swift in Sources */,
 				CE6663CE2BE35AE700514E86 /* AppDelegate.swift in Sources */,
 				CE4593422BE891190031FB59 /* ProfileVCUpdater.swift in Sources */,
@@ -575,7 +534,6 @@
 				CE4593362BE8851F0031FB59 /* StartVCBuilder.swift in Sources */,
 				CE4593292BE87D0C0031FB59 /* TabBarFlowCoordinator.swift in Sources */,
 				CEAB43472C4A3688001E4C7D /* TextFieldFlowCoordinator.swift in Sources */,
-				CE258F1A2C6CA77400448302 /* TableCell.swift in Sources */,
 				CE46CD612C104BB800A63F64 /* TextFieldVCUpdater.swift in Sources */,
 				CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */,
 				CE46CD422C0F0C6900A63F64 /* MainVCBuilder.swift in Sources */,
@@ -584,11 +542,9 @@
 				CE46CD472C0F0CEA00A63F64 /* MainFeature.swift in Sources */,
 				CE46CD5D2C104B3100A63F64 /* TextFieldVC.swift in Sources */,
 				CE6664102BE3667800514E86 /* Dependency.swift in Sources */,
-				CE258F202C6CA7C300448302 /* ContainerTableCell.swift in Sources */,
 				CE4593312BE8801C0031FB59 /* ProfileFeature.swift in Sources */,
 				CE46CD662C1091B000A63F64 /* TextFieldDelegate.swift in Sources */,
 				CE4593222BE87BB30031FB59 /* StartFeature.swift in Sources */,
-				CE258F1C2C6CA79600448302 /* Section.swift in Sources */,
 				CE46CD562C0F166700A63F64 /* Extension + UIView.swift in Sources */,
 				CE46CD572C0F166700A63F64 /* Extension + UIViewController.swift in Sources */,
 				CE45933B2BE88C350031FB59 /* StartFlow.swift in Sources */,
@@ -932,85 +888,59 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CE1EFC0F2BEA514A002EA59B /* XCRemoteSwiftPackageReference "ios-service-routing" */ = {
+		348C537C2C73980600ACEA5C /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.akbars.tech/abo/ios-service-routing";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		CE46CD582C0F226700A63F64 /* XCRemoteSwiftPackageReference "ios-extensions" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.akbars.tech/abo/ios-extensions";
+			repositoryURL = "https://gitlab.akbars.tech/abo/ios-resources-bottom-sheet";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
+				minimumVersion = 9.0.1;
 			};
 		};
-		CE66640B2BE3665D00514E86 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+		348C537F2C73982100ACEA5C /* XCRemoteSwiftPackageReference "Resolver" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			repositoryURL = "https://github.com/hmlongco/Resolver";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.5.1;
 			};
 		};
-		CE7C332E2C49025E0077ABC1 /* XCRemoteSwiftPackageReference "ios" */ = {
+		348C53822C73983000ACEA5C /* XCRemoteSwiftPackageReference "ios-service-routing" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.akbars.tech/abo/ios.architecture";
+			repositoryURL = "https://gitlab.akbars.tech/abo/ios-service-routing";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-		CE7C33312C490AB30077ABC1 /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.akbars.tech/abo/ios-resources-bottom-sheet";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
+				minimumVersion = 0.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		348C537D2C73980600ACEA5C /* BottomSheetService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 348C537C2C73980600ACEA5C /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */;
+			productName = BottomSheetService;
+		};
+		348C53802C73982100ACEA5C /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 348C537F2C73982100ACEA5C /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+		348C53832C73983000ACEA5C /* Router */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 348C53822C73983000ACEA5C /* XCRemoteSwiftPackageReference "ios-service-routing" */;
+			productName = Router;
+		};
 		CE1CE7152C086B87006F6468 /* Architecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Architecture;
-		};
-		CE1EFC102BEA514A002EA59B /* Router */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE1EFC0F2BEA514A002EA59B /* XCRemoteSwiftPackageReference "ios-service-routing" */;
-			productName = Router;
 		};
 		CE45936B2BE8FE940031FB59 /* Router */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Router;
 		};
-		CE46CD592C0F226700A63F64 /* Extensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE46CD582C0F226700A63F64 /* XCRemoteSwiftPackageReference "ios-extensions" */;
-			productName = Extensions;
-		};
-		CE66640C2BE3665D00514E86 /* Resolver */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE66640B2BE3665D00514E86 /* XCRemoteSwiftPackageReference "Resolver" */;
-			productName = Resolver;
-		};
 		CE668F8D2BEB585800827E64 /* Architecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Architecture;
-		};
-		CE7C332F2C49025E0077ABC1 /* Architecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE7C332E2C49025E0077ABC1 /* XCRemoteSwiftPackageReference "ios" */;
-			productName = Architecture;
-		};
-		CE7C33322C490AB30077ABC1 /* BottomSheetService */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE7C33312C490AB30077ABC1 /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */;
-			productName = BottomSheetService;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

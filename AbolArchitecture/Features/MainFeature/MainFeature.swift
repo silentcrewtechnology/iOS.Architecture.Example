@@ -51,48 +51,37 @@ final class MainFeature: FeatureCoordinatorProtocol {
     private func setCell() {
         // получилии с бека
         let leading = DSRowBlocks.atom(.image40(.ic24House, nil))
-        let center1 = DSRowBlocks.atom(.title("Text Field", nil))
-        let center2 = DSRowBlocks.atom(.title("componentCell2", nil))
-        let center3 = DSRowBlocks.atom(.title("componentCell3", nil))
+        let center1 = DSRowBlocks.atom(.label("Text Field", nil))
+        let center2 = DSRowBlocks.atom(.label("componentCell2", nil))
+        let center3 = DSRowBlocks.atom(.label("componentCell3", nil))
         
-        let componentCell1 = TableCell.iconTitle(
+        let rowView1 = DSCreationRowsViewService().createViewRowWithBlocks(
             leading: leading,
             center: center1,
-            tap: { [ weak self] in
-                self?.runNewFlow?(MainFlow.textField)
-            }
+            trailing: nil
         )
-        let componentCell2 = TableCell.iconTitle(
+        rowView1.addTapGesture { [ weak self] in
+            self?.runNewFlow?(MainFlow.textField)
+        }
+        
+        let rowView2 = DSCreationRowsViewService().createViewRowWithBlocks(
             leading: leading,
             center: center2,
-            tap: { [ weak self] in
-               
-            }
-        )
-        let componentCell3 = TableCell.iconTitle(
-            leading: leading,
-            center: center3,
-            tap: { [ weak self] in
-               
-            }
+            trailing: nil
         )
         
-        let row1 = Row(
-            view: componentCell1.cell(),
-            selectionStyle: .blue,
-            height: 60
+        let rowView3 = DSCreationRowsViewService().createViewRowWithBlocks(
+            leading: leading,
+            center: center3,
+            trailing: nil
         )
-        let row2 = Row(
-            view: componentCell2.cell(),
-            selectionStyle: .blue,
-            height: 60
-        )
-        let row3 = Row(
-            view: componentCell3.cell(),
-            selectionStyle: .blue,
-            height: 60
-        )
-        let section = Section(rows: [row1, row2, row3])
+        
+        let cell = CellModel(view: rowView1, height: 60)
+        let cell2 = CellModel(view: rowView2, height: 60)
+        let cell3 = CellModel(view: rowView3, height: 60)
+        
+        
+        let section = SectionModel(cells: [cell, cell2, cell3])
         tableDataSource.update(with: [section])
         tableDelegate.update(with: [section])
         tableViewBuilder.viewUpdater.state = .reloadData
