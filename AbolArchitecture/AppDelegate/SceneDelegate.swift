@@ -13,13 +13,16 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     // MARK: - DI
-    private let mainCoordinatorProtocol: MainCoordinatorProtocol = Resolver.resolve()
+    private var mainCoordinator: MainCoordinatorProtocol?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        mainCoordinatorProtocol.setRoot()
-        mainCoordinatorProtocol.setupCoordinatorsFlow()
+        
+        mainCoordinator = MainCoordinator(routerService: .init())
+        
+        mainCoordinator?.setRoot()
+        mainCoordinator?.setupCoordinatorsFlow()
     }
 }
 
