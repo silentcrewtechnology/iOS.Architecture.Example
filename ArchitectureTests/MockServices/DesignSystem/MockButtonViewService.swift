@@ -2,7 +2,7 @@ import Components
 import DesignSystem
 @testable import AbolArchitecture
 
-class MockButtonViewService: ButtonViewServiceProtocol {
+final class MockButtonViewService: ButtonViewServiceProtocol {
     
     var view: ButtonView = ButtonView()
     var viewProperties: ButtonView.ViewProperties

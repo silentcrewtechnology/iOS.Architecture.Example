@@ -3,7 +3,7 @@ import Foundation
 import DesignSystem
 @testable import AbolArchitecture
 
-class MockLabelViewService: LabelViewServiceProtocol {
+final class MockLabelViewService: LabelViewServiceProtocol {
     var view: LabelView = LabelView()
     var viewProperties: LabelView.ViewProperties = .init()
     var style: LabelViewStyle = .init(variant: .default(customColor: .Semantic.LightTheme.Content.Base.primary))

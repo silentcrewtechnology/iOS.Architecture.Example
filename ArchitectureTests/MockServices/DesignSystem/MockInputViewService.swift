@@ -2,7 +2,7 @@ import Components
 import DesignSystem
 @testable import AbolArchitecture
 
-class MockInputViewService: InputViewServiceProtocol {
+final class MockInputViewService: InputViewServiceProtocol {
     var view: InputView = InputView()
     var viewProperties: InputView.ViewProperties
     var style: InputViewStyle
