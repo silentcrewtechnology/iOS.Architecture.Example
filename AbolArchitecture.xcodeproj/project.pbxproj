@@ -80,7 +80,6 @@
 		3405D6E02CF5D96B00658A3C /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		3405D6E22CF5D96B00658A3C /* WelcomeViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewServicesHandler.swift; sourceTree = "<group>"; };
 		3405D6E72CF5E2AE00658A3C /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
-		341394442CE6088600823AE7 /* ios-resources-icons */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-resources-icons"; path = "../ios-resources-icons"; sourceTree = SOURCE_ROOT; };
 		3428B7322CF61EBD00336EA5 /* MockButtonViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockButtonViewService.swift; sourceTree = "<group>"; };
 		3428B7342CF6232C00336EA5 /* MockInputViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInputViewService.swift; sourceTree = "<group>"; };
 		3428B7362CF6237300336EA5 /* MockLabelViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLabelViewService.swift; sourceTree = "<group>"; };
@@ -90,12 +89,6 @@
 		347267F62CE67BD500C81256 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		347267F72CE67BD500C81256 /* HomeViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewServicesHandler.swift; sourceTree = "<group>"; };
 		347267FF2CECF10500C81256 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
-		347268012CEE33C200C81256 /* ios-resources-ui-components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-resources-ui-components"; path = "../ios-resources-ui-components"; sourceTree = SOURCE_ROOT; };
-		347268032CEE357F00C81256 /* ios.designsystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ios.designsystem; path = ../ios.designsystem; sourceTree = SOURCE_ROOT; };
-		3486332A2CE663130075CD0D /* ios-resources-colors */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-resources-colors"; path = "../ios-resources-colors"; sourceTree = SOURCE_ROOT; };
-		3486332B2CE663410075CD0D /* ios-resources-fonts */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-resources-fonts"; path = "../ios-resources-fonts"; sourceTree = SOURCE_ROOT; };
-		3486332D2CE663C20075CD0D /* ios-architecture-table */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-architecture-table"; path = "../ios-architecture-table"; sourceTree = SOURCE_ROOT; };
-		3486332E2CE664070075CD0D /* ios-services */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-services"; path = "../ios-services"; sourceTree = SOURCE_ROOT; };
 		3489EFBC2D078D3A005F3B65 /* AuthValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthValidationServiceTests.swift; sourceTree = "<group>"; };
 		3489EFBF2D078FE9005F3B65 /* MockAuthValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthValidationService.swift; sourceTree = "<group>"; };
 		3489EFC52D07920B005F3B65 /* MockHomeServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeServiceFactory.swift; sourceTree = "<group>"; };
@@ -380,13 +373,6 @@
 		CE6663C12BE35AE700514E86 = {
 			isa = PBXGroup;
 			children = (
-				347268032CEE357F00C81256 /* ios.designsystem */,
-				347268012CEE33C200C81256 /* ios-resources-ui-components */,
-				3486332E2CE664070075CD0D /* ios-services */,
-				3486332D2CE663C20075CD0D /* ios-architecture-table */,
-				3486332B2CE663410075CD0D /* ios-resources-fonts */,
-				3486332A2CE663130075CD0D /* ios-resources-colors */,
-				341394442CE6088600823AE7 /* ios-resources-icons */,
 				CE6663CC2BE35AE700514E86 /* AbolArchitecture */,
 				CE6663E32BE35AE900514E86 /* ArchitectureTests */,
 				CE6663ED2BE35AE900514E86 /* ArchitectureUITests */,

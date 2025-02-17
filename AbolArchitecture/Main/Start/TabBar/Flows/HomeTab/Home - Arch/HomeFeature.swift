@@ -73,12 +73,14 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
     
     private func initialUIServices() {
         let loginInputService = factory.setupLoginInputService(onTextChange: { [weak self] text in
-            guard let self = self else { return }
+            guard let self = self,
+                  let text = text else { return }
             self.handleAction(.loginUpdate(text))
         })
         
         let passwordInputService = factory.setupPasswordInputService(onTextChange: { [weak self] text in
-            guard let self = self else { return }
+            guard let self = self,
+                  let text = text else { return }
             handleAction(.passwordUpdate(text))
         })
         

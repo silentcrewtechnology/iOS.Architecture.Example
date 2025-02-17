@@ -4,9 +4,9 @@ import DesignSystem
 protocol HomeServiceFactoryProtocol {
     func setupLogoImageService() -> ImageViewServiceProtocol
     func setupLoginLabelService() -> LabelViewServiceProtocol
-    func setupLoginInputService(onTextChange: ((String) -> Void)?) -> InputViewServiceProtocol
+    func setupLoginInputService(onTextChange: ((String?) -> Void)?) -> InputViewServiceProtocol
     func setupPasswordLabelService() -> LabelViewServiceProtocol
-    func setupPasswordInputService(onTextChange: ((String) -> Void)?) -> InputViewServiceProtocol
+    func setupPasswordInputService(onTextChange: ((String?) -> Void)?) -> InputViewServiceProtocol
     func setupButtonService(onTap: (() -> Void)?) -> ButtonViewServiceProtocol
     func setupValidationService() -> AuthValidationServiceProtocol
 }
@@ -36,18 +36,17 @@ final class HomeServiceFactory: HomeServiceFactoryProtocol {
         return loginLabelService
     }
     
-    func setupLoginInputService(onTextChange: ((String) -> Void)?) -> InputViewServiceProtocol {
+    func setupLoginInputService(onTextChange: ((String?) -> Void)?) -> InputViewServiceProtocol {
         let loginInputService = InputViewService(
             viewProperties: .init(
                 textFieldViewProperties: .init(
                     text: .init(string: ""),
                     placeholder: .init(string: "Твой логин")
                 ),
-                minHeight: 80,
-                stackViewInsets: .init(inset: 0)
+                stackViewInsets: .init(inset: 0),
+                onTextChanged: onTextChange
             ),
-            style: .init(state: .`default`, set: .simple),
-            onTextChange: onTextChange
+            style: .init(state: .`default`, set: .simple)
         )
         loginInputService.update(with: nil)
         
@@ -65,18 +64,17 @@ final class HomeServiceFactory: HomeServiceFactoryProtocol {
         
     }
     
-    func setupPasswordInputService(onTextChange: ((String) -> Void)?) -> InputViewServiceProtocol {
+    func setupPasswordInputService(onTextChange: ((String?) -> Void)?) -> InputViewServiceProtocol {
         let passwordInputService = InputViewService(
             viewProperties: .init(
                 textFieldViewProperties: .init(
                     text: .init(string: ""),
                     placeholder: .init(string: "Твой пароль")
                 ),
-                minHeight: 80,
-                stackViewInsets: .init(inset: 0)
+                stackViewInsets: .init(inset: 0),
+                onTextChanged: onTextChange
             ),
-            style: .init(state: .`default`, set: .simple),
-            onTextChange: onTextChange
+            style: .init(state: .`default`, set: .simple)
         )
         passwordInputService.update(with: nil)
         return passwordInputService

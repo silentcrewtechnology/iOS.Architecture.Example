@@ -55,15 +55,15 @@ public class HomeViewServicesHandler: HomeViewServicesHandlerProtocol {
     public func handleAction(_ state: HomeViewServicesHandler.State) {
         switch state {
         case .errorLogin:
-            loginInputService?.update(with: .init(state: .error(.init())))
+            loginInputService?.update(with: .init(state: .error), onTextChanged: nil)
         case .errorPassword:
-            passwordInputService?.update(with: .init(state: .error(.init())))
+            passwordInputService?.update(with: .init(state: .error), onTextChanged: nil)
         case .clearLogin:
-            passwordInputService?.update(with: .init(state: .default))
-            loginInputService?.update(with: .init(state: .active))
+            passwordInputService?.update(with: .init(state: .default), onTextChanged: nil)
+            loginInputService?.update(with: .init(state: .active), onTextChanged: nil)
         case .clearPassword:
-            loginInputService?.update(with: .init(state: .default))
-            passwordInputService?.update(with: .init(state: .active))
+            loginInputService?.update(with: .init(state: .default), onTextChanged: nil)
+            passwordInputService?.update(with: .init(state: .active), onTextChanged: nil)
         }
     }
     
