@@ -1,5 +1,5 @@
 // 
-//  HomeVC.swift
+//  AuthVC.swift
 //  AbolArchitecture
 //
 //  Created by Валерий Васин on 14.11.2024.
@@ -8,14 +8,14 @@
 import Architecture
 import UIKit
 
-public final class HomeVC: UIViewController, ViewProtocol {
+public final class AuthVC: UIViewController, ViewProtocol {
    
     deinit {
-        print("💀 удалился HomeScreenController")
+        print("💀 удалился AuthScreenController")
     }
     
     public struct ViewProperties {
-        var accessibilityId = "HomeScreenController"
+        var accessibilityId = "AuthScreenController"
         var logoView: UIView
         var loginLabelView: UIView
         var loginInputView: UIView
@@ -26,7 +26,7 @@ public final class HomeVC: UIViewController, ViewProtocol {
         // и остальные нужные для ViewController параметры
         
         public init(
-            accessibilityId: String = "HomeScreenController",
+            accessibilityId: String = "AuthScreenController",
             logoView: UIView = .init(),
             loginLabelView: UIView = .init(),
             loginInputView: UIView = .init(),
@@ -44,8 +44,10 @@ public final class HomeVC: UIViewController, ViewProtocol {
         }
     }
     
+    // MARK: Properties
     private var viewProperties: ViewProperties
     
+    // MARK: Init
     public init(viewProperties: ViewProperties) {
         self.viewProperties = viewProperties
         super.init(nibName: nil, bundle: nil)
@@ -57,11 +59,21 @@ public final class HomeVC: UIViewController, ViewProtocol {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemCyan
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     public func update(with viewProperties: ViewProperties) {
         self.viewProperties = viewProperties
+        view.backgroundColor = .systemCyan
         setupSubview()
         setupAccessibilityId()
         // Здесь обновляем все свойства вью
@@ -83,8 +95,8 @@ public final class HomeVC: UIViewController, ViewProtocol {
         logo.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(28)
-            $0.width.equalTo(160)
-            $0.height.equalTo(120)
+//            $0.width.equalTo(160)
+//            $0.height.equalTo(120)
         }
     }
     
@@ -117,7 +129,7 @@ public final class HomeVC: UIViewController, ViewProtocol {
         
         view.addSubview(passwordLabelView)
         passwordLabelView.snp.makeConstraints {
-            $0.top.equalTo(viewProperties.loginInputView.snp.bottom)
+            $0.top.equalTo(viewProperties.loginInputView.snp.bottom).offset(16)
             $0.leading.equalToSuperview().offset(38)
             $0.trailing.equalToSuperview().offset(-38)
         }
@@ -135,13 +147,12 @@ public final class HomeVC: UIViewController, ViewProtocol {
         guard buttonView.superview != view else { return }
         view.addSubview(buttonView)
         buttonView.snp.makeConstraints {
-            $0.top.equalTo(viewProperties.passwordInputView.snp.bottom).offset(8)
-            $0.leading.equalToSuperview().offset(40)
-            $0.trailing.equalToSuperview().offset(-40)
+            $0.top.equalTo(viewProperties.passwordInputView.snp.bottom).offset(32)
+            $0.leading.equalToSuperview().offset(38)
+            $0.trailing.equalToSuperview().offset(-38)
         }
     }
     
-    // Заменить в Templates
     private func setupAccessibilityId() {
         view.isAccessibilityElement = true
         view.accessibilityIdentifier = viewProperties.accessibilityId

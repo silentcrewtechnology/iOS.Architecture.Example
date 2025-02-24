@@ -1,7 +1,7 @@
 import UIKit
 import DesignSystem
 
-protocol HomeServiceFactoryProtocol {
+protocol AuthServiceFactoryProtocol {
     func setupLogoImageService() -> ImageViewServiceProtocol
     func setupLoginLabelService() -> LabelViewServiceProtocol
     func setupLoginInputService(onTextChange: ((String?) -> Void)?) -> InputViewServiceProtocol
@@ -11,7 +11,7 @@ protocol HomeServiceFactoryProtocol {
     func setupValidationService() -> AuthValidationServiceProtocol
 }
 
-final class HomeServiceFactory: HomeServiceFactoryProtocol {
+final class AuthServiceFactory: AuthServiceFactoryProtocol {
     
     // MARK: Logo
     func setupLogoImageService() -> ImageViewServiceProtocol {
@@ -19,7 +19,8 @@ final class HomeServiceFactory: HomeServiceFactoryProtocol {
         let logoImageService = ImageViewService(
             style: .init(
                 type: .fillImage(logo),
-                color: .primary
+                color: .primary,
+                size: .extraLarge
             )
         )
         logoImageService.update(with: nil)

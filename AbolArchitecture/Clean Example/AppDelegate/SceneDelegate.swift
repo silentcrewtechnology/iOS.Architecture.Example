@@ -21,8 +21,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         mainCoordinator = MainCoordinator(routerService: .init())
         
-        mainCoordinator?.setRoot()
         mainCoordinator?.setupCoordinatorsFlow()
+        mainCoordinator?.setRoot()
     }
 }
 

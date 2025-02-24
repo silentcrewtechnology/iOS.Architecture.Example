@@ -1,7 +1,7 @@
 import Architecture
 import DesignSystem
 
-protocol HomeViewServicesHandlerProtocol {
+protocol AuthViewServicesHandlerProtocol {
     
     func setServices(
         logoImageService: ImageViewServiceProtocol,
@@ -12,12 +12,12 @@ protocol HomeViewServicesHandlerProtocol {
         buttonService: ButtonViewServiceProtocol
     )
     
-    func getViewServices() -> HomeVC.ViewProperties
+    func getViewServices() -> AuthVC.ViewProperties
     
-    func handleAction(_ state: HomeViewServicesHandler.State)
+    func handleAction(_ state: AuthViewServicesHandler.State)
 }
 
-public class HomeViewServicesHandler: HomeViewServicesHandlerProtocol {
+public class AuthViewServicesHandler: AuthViewServicesHandlerProtocol {
     
     // MARK: UI
     private var logoImageService: ImageViewServiceProtocol?
@@ -52,7 +52,7 @@ public class HomeViewServicesHandler: HomeViewServicesHandlerProtocol {
     }
     
     // MARK: Logic
-    public func handleAction(_ state: HomeViewServicesHandler.State) {
+    public func handleAction(_ state: AuthViewServicesHandler.State) {
         switch state {
         case .errorLogin:
             loginInputService?.update(with: .init(state: .error), onTextChanged: nil)
@@ -67,7 +67,7 @@ public class HomeViewServicesHandler: HomeViewServicesHandlerProtocol {
         }
     }
     
-    public func getViewServices() -> HomeVC.ViewProperties {
+    public func getViewServices() -> AuthVC.ViewProperties {
         guard
             let logoImageService,
             let loginLabelService,

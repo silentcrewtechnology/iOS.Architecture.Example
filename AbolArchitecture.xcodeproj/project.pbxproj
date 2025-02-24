@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340548552D64D2BD00CC8A0D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340548542D64D2B500CC8A0D /* AuthService.swift */; };
+		340548572D64D3F400CC8A0D /* AuthFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340548562D64D3EC00CC8A0D /* AuthFlowCoordinator.swift */; };
 		3405D6E32CF5D96B00658A3C /* WelcomeViewServicesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D6E22CF5D96B00658A3C /* WelcomeViewServicesHandler.swift */; };
 		3405D6E42CF5D96B00658A3C /* WelcomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D6DF2CF5D96B00658A3C /* WelcomeFeature.swift */; };
 		3405D6E52CF5D96B00658A3C /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405D6E02CF5D96B00658A3C /* WelcomeVC.swift */; };
@@ -15,10 +17,9 @@
 		3428B7352CF6232E00336EA5 /* MockInputViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3428B7342CF6232C00336EA5 /* MockInputViewService.swift */; };
 		3428B7372CF6237400336EA5 /* MockLabelViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3428B7362CF6237300336EA5 /* MockLabelViewService.swift */; };
 		3428B7392CF623D200336EA5 /* HomeFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3428B7382CF623D100336EA5 /* HomeFeatureTests.swift */; };
-		347267F12CE6753700C81256 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347267F02CE6753400C81256 /* MainCoordinator.swift */; };
-		347267F92CE67BD500C81256 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347267F62CE67BD500C81256 /* HomeVC.swift */; };
-		347267FA2CE67BD500C81256 /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347267F52CE67BD500C81256 /* HomeFeature.swift */; };
-		347267FB2CE67BD500C81256 /* HomeViewServicesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347267F72CE67BD500C81256 /* HomeViewServicesHandler.swift */; };
+		347267F92CE67BD500C81256 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347267F62CE67BD500C81256 /* AuthVC.swift */; };
+		347267FA2CE67BD500C81256 /* AuthFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347267F52CE67BD500C81256 /* AuthFeature.swift */; };
+		347267FB2CE67BD500C81256 /* AuthViewServicesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347267F72CE67BD500C81256 /* AuthViewServicesHandler.swift */; };
 		347268002CECF10900C81256 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347267FF2CECF10500C81256 /* TabBarFlowCoordinator.swift */; };
 		3489EFBD2D078D3D005F3B65 /* AuthValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489EFBC2D078D3A005F3B65 /* AuthValidationServiceTests.swift */; };
 		3489EFC02D078FEB005F3B65 /* MockAuthValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489EFBF2D078FE9005F3B65 /* MockAuthValidationService.swift */; };
@@ -28,10 +29,13 @@
 		348C537E2C73980600ACEA5C /* BottomSheetService in Frameworks */ = {isa = PBXBuildFile; productRef = 348C537D2C73980600ACEA5C /* BottomSheetService */; };
 		348C53812C73982100ACEA5C /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 348C53802C73982100ACEA5C /* Resolver */; };
 		348C53842C73983000ACEA5C /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = 348C53832C73983000ACEA5C /* Router */; };
+		349FB36A2D649F8200942F01 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FB3692D649F7D00942F01 /* MainCoordinator.swift */; };
+		349FB3712D64A2C500942F01 /* StartServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FB3702D64A2BC00942F01 /* StartServiceFactory.swift */; };
+		349FB3742D64A5BF00942F01 /* StartViewServicesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349FB3732D64A5AE00942F01 /* StartViewServicesHandler.swift */; };
 		34BAF9BA2D073A3200DC01D2 /* WelcomeServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9B92D073A2B00DC01D2 /* WelcomeServiceFactory.swift */; };
 		34BAF9BD2D074C6000DC01D2 /* SettingsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9BC2D074C5600DC01D2 /* SettingsItems.swift */; };
 		34C05F3C2CFB377F0061E6A1 /* AuthValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C05F3B2CFB37700061E6A1 /* AuthValidationService.swift */; };
-		34C05F3E2CFF23260061E6A1 /* HomeServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C05F3D2CFF23160061E6A1 /* HomeServiceFactory.swift */; };
+		34C05F3E2CFF23260061E6A1 /* AuthServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C05F3D2CFF23160061E6A1 /* AuthServiceFactory.swift */; };
 		34C05F402D002FFE0061E6A1 /* SettingsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C05F3F2D002FF30061E6A1 /* SettingsFeature.swift */; };
 		CE1CE7162C086B87006F6468 /* Architecture in Frameworks */ = {isa = PBXBuildFile; productRef = CE1CE7152C086B87006F6468 /* Architecture */; };
 		CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593102BE873640031FB59 /* TabBarVC.swift */; };
@@ -41,9 +45,6 @@
 		CE45932E2BE87E2A0031FB59 /* TabBarVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45932C2BE87E290031FB59 /* TabBarVCBuilder.swift */; };
 		CE45932F2BE87E2A0031FB59 /* TabBarVCUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45932D2BE87E2A0031FB59 /* TabBarVCUpdater.swift */; };
 		CE4593342BE884FE0031FB59 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593332BE884FE0031FB59 /* StartVC.swift */; };
-		CE4593362BE8851F0031FB59 /* StartVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593352BE8851F0031FB59 /* StartVCBuilder.swift */; };
-		CE4593382BE885330031FB59 /* StartVCUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4593372BE885330031FB59 /* StartVCUpdater.swift */; };
-		CE45933B2BE88C350031FB59 /* StartFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45933A2BE88C350031FB59 /* StartFlow.swift */; };
 		CE45936C2BE8FE940031FB59 /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = CE45936B2BE8FE940031FB59 /* Router */; };
 		CE46CD502C0F161400A63F64 /* TabBarVCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD4E2C0F161400A63F64 /* TabBarVCService.swift */; };
 		CE46CD572C0F166700A63F64 /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46CD532C0F166700A63F64 /* Extension + UIViewController.swift */; };
@@ -76,6 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		340548512D64CA5000CC8A0D /* ios.architecture */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ios.architecture; path = ../ios.architecture; sourceTree = SOURCE_ROOT; };
+		340548542D64D2B500CC8A0D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		340548562D64D3EC00CC8A0D /* AuthFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowCoordinator.swift; sourceTree = "<group>"; };
 		3405D6DF2CF5D96B00658A3C /* WelcomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFeature.swift; sourceTree = "<group>"; };
 		3405D6E02CF5D96B00658A3C /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		3405D6E22CF5D96B00658A3C /* WelcomeViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewServicesHandler.swift; sourceTree = "<group>"; };
@@ -84,20 +88,23 @@
 		3428B7342CF6232C00336EA5 /* MockInputViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInputViewService.swift; sourceTree = "<group>"; };
 		3428B7362CF6237300336EA5 /* MockLabelViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLabelViewService.swift; sourceTree = "<group>"; };
 		3428B7382CF623D100336EA5 /* HomeFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeatureTests.swift; sourceTree = "<group>"; };
-		347267F02CE6753400C81256 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		347267F52CE67BD500C81256 /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
-		347267F62CE67BD500C81256 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		347267F72CE67BD500C81256 /* HomeViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewServicesHandler.swift; sourceTree = "<group>"; };
+		347267F52CE67BD500C81256 /* AuthFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFeature.swift; sourceTree = "<group>"; };
+		347267F62CE67BD500C81256 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		347267F72CE67BD500C81256 /* AuthViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewServicesHandler.swift; sourceTree = "<group>"; };
 		347267FF2CECF10500C81256 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
 		3489EFBC2D078D3A005F3B65 /* AuthValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthValidationServiceTests.swift; sourceTree = "<group>"; };
 		3489EFBF2D078FE9005F3B65 /* MockAuthValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthValidationService.swift; sourceTree = "<group>"; };
 		3489EFC52D07920B005F3B65 /* MockHomeServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeServiceFactory.swift; sourceTree = "<group>"; };
 		3489EFC72D07935A005F3B65 /* MockImageViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageViewService.swift; sourceTree = "<group>"; };
 		3489EFCB2D09C841005F3B65 /* MockHomeViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewServicesHandler.swift; sourceTree = "<group>"; };
+		349FB3692D649F7D00942F01 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		349FB3702D64A2BC00942F01 /* StartServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartServiceFactory.swift; sourceTree = "<group>"; };
+		349FB3732D64A5AE00942F01 /* StartViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewServicesHandler.swift; sourceTree = "<group>"; };
+		34B01CBA2D6CB13E001E86A9 /* ios-service-routing */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-service-routing"; path = "../ios-service-routing"; sourceTree = SOURCE_ROOT; };
 		34BAF9B92D073A2B00DC01D2 /* WelcomeServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeServiceFactory.swift; sourceTree = "<group>"; };
 		34BAF9BC2D074C5600DC01D2 /* SettingsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItems.swift; sourceTree = "<group>"; };
 		34C05F3B2CFB37700061E6A1 /* AuthValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthValidationService.swift; sourceTree = "<group>"; };
-		34C05F3D2CFF23160061E6A1 /* HomeServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceFactory.swift; sourceTree = "<group>"; };
+		34C05F3D2CFF23160061E6A1 /* AuthServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceFactory.swift; sourceTree = "<group>"; };
 		34C05F3F2D002FF30061E6A1 /* SettingsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFeature.swift; sourceTree = "<group>"; };
 		CE4593102BE873640031FB59 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		CE4593212BE87BB30031FB59 /* StartFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFeature.swift; sourceTree = "<group>"; };
@@ -106,9 +113,6 @@
 		CE45932C2BE87E290031FB59 /* TabBarVCBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVCBuilder.swift; sourceTree = "<group>"; };
 		CE45932D2BE87E2A0031FB59 /* TabBarVCUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVCUpdater.swift; sourceTree = "<group>"; };
 		CE4593332BE884FE0031FB59 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
-		CE4593352BE8851F0031FB59 /* StartVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVCBuilder.swift; sourceTree = "<group>"; };
-		CE4593372BE885330031FB59 /* StartVCUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVCUpdater.swift; sourceTree = "<group>"; };
-		CE45933A2BE88C350031FB59 /* StartFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFlow.swift; sourceTree = "<group>"; };
 		CE46CD4E2C0F161400A63F64 /* TabBarVCService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVCService.swift; sourceTree = "<group>"; };
 		CE46CD532C0F166700A63F64 /* Extension + UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
 		CE6663CA2BE35AE700514E86 /* AbolArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbolArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +160,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		340548522D64CD2200CC8A0D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34C05F3B2CFB37700061E6A1 /* AuthValidationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		340548532D64D2A500CC8A0D /* public services */ = {
+			isa = PBXGroup;
+			children = (
+				340548542D64D2B500CC8A0D /* AuthService.swift */,
+			);
+			path = "public services";
+			sourceTree = "<group>";
+		};
 		3405D6DC2CF5D85F00658A3C /* Welcome - Arch */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				3405D6DC2CF5D85F00658A3C /* Welcome - Arch */,
-				347267F32CE67AF400C81256 /* Home - Arch */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -225,7 +244,6 @@
 		347267ED2CE66CEC00C81256 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				3489EFB82D078B7C005F3B65 /* Main */,
 				347267EF2CE6752600C81256 /* Start */,
 			);
 			path = Main;
@@ -247,18 +265,6 @@
 				3405D6DD2CF5D87200658A3C /* HomeTab */,
 			);
 			path = Flows;
-			sourceTree = "<group>";
-		};
-		347267F32CE67AF400C81256 /* Home - Arch */ = {
-			isa = PBXGroup;
-			children = (
-				34C05F382CFB1FE10061E6A1 /* Services */,
-				347267F52CE67BD500C81256 /* HomeFeature.swift */,
-				347267F62CE67BD500C81256 /* HomeVC.swift */,
-				34C05F3D2CFF23160061E6A1 /* HomeServiceFactory.swift */,
-				347267F72CE67BD500C81256 /* HomeViewServicesHandler.swift */,
-			);
-			path = "Home - Arch";
 			sourceTree = "<group>";
 		};
 		347267F42CE67B5200C81256 /* Profile - TableArch */ = {
@@ -288,23 +294,9 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		3489EFB82D078B7C005F3B65 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				347267F02CE6753400C81256 /* MainCoordinator.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		3489EFB92D078B84005F3B65 /* Start */ = {
 			isa = PBXGroup;
 			children = (
-				CE4593262BE87C9D0031FB59 /* StartFlowCoordinator.swift */,
-				CE4593212BE87BB30031FB59 /* StartFeature.swift */,
-				CE45933A2BE88C350031FB59 /* StartFlow.swift */,
-				CE4593332BE884FE0031FB59 /* StartVC.swift */,
-				CE4593352BE8851F0031FB59 /* StartVCBuilder.swift */,
-				CE4593372BE885330031FB59 /* StartVCUpdater.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -339,6 +331,82 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		349FB3672D649F2700942F01 /* Clean Example */ = {
+			isa = PBXGroup;
+			children = (
+				349FB3682D649F7500942F01 /* Global */,
+				CE6663FD2BE35AFE00514E86 /* AppDelegate */,
+			);
+			path = "Clean Example";
+			sourceTree = "<group>";
+		};
+		349FB3682D649F7500942F01 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				340548532D64D2A500CC8A0D /* public services */,
+				349FB3692D649F7D00942F01 /* MainCoordinator.swift */,
+				349FB36B2D64A01C00942F01 /* Start */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		349FB36B2D64A01C00942F01 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				349FB36C2D64A04300942F01 /* Start */,
+				349FB36D2D64A04900942F01 /* Auth */,
+				349FB36E2D64A05200942F01 /* Main */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		349FB36C2D64A04300942F01 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				349FB3722D64A57A00942F01 /* Services */,
+				CE4593262BE87C9D0031FB59 /* StartFlowCoordinator.swift */,
+				349FB3732D64A5AE00942F01 /* StartViewServicesHandler.swift */,
+				CE4593332BE884FE0031FB59 /* StartVC.swift */,
+				CE4593212BE87BB30031FB59 /* StartFeature.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		349FB36D2D64A04900942F01 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				34C05F382CFB1FE10061E6A1 /* Services */,
+				340548562D64D3EC00CC8A0D /* AuthFlowCoordinator.swift */,
+				347267F72CE67BD500C81256 /* AuthViewServicesHandler.swift */,
+				347267F62CE67BD500C81256 /* AuthVC.swift */,
+				347267F52CE67BD500C81256 /* AuthFeature.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		349FB36E2D64A05200942F01 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		349FB3722D64A57A00942F01 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				349FB3752D64B62400942F01 /* Services */,
+				349FB3702D64A2BC00942F01 /* StartServiceFactory.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		349FB3752D64B62400942F01 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		34BAF9BB2D0745BE00DC01D2 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,7 +426,8 @@
 		34C05F382CFB1FE10061E6A1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				34C05F3B2CFB37700061E6A1 /* AuthValidationService.swift */,
+				340548522D64CD2200CC8A0D /* Services */,
+				34C05F3D2CFF23160061E6A1 /* AuthServiceFactory.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -373,6 +442,8 @@
 		CE6663C12BE35AE700514E86 = {
 			isa = PBXGroup;
 			children = (
+				34B01CBA2D6CB13E001E86A9 /* ios-service-routing */,
+				340548512D64CA5000CC8A0D /* ios.architecture */,
 				CE6663CC2BE35AE700514E86 /* AbolArchitecture */,
 				CE6663E32BE35AE900514E86 /* ArchitectureTests */,
 				CE6663ED2BE35AE900514E86 /* ArchitectureUITests */,
@@ -394,9 +465,9 @@
 		CE6663CC2BE35AE700514E86 /* AbolArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				349FB3672D649F2700942F01 /* Clean Example */,
 				3489EFB72D078A94005F3B65 /* Extensions */,
 				347267ED2CE66CEC00C81256 /* Main */,
-				CE6663FD2BE35AFE00514E86 /* AppDelegate */,
 				CE6663D82BE35AE900514E86 /* LaunchScreen.storyboard */,
 				CE6663FE2BE35B1F00514E86 /* Resources */,
 			);
@@ -596,23 +667,24 @@
 				3405D6E32CF5D96B00658A3C /* WelcomeViewServicesHandler.swift in Sources */,
 				3405D6E42CF5D96B00658A3C /* WelcomeFeature.swift in Sources */,
 				3405D6E52CF5D96B00658A3C /* WelcomeVC.swift in Sources */,
+				349FB3742D64A5BF00942F01 /* StartViewServicesHandler.swift in Sources */,
+				349FB3712D64A2C500942F01 /* StartServiceFactory.swift in Sources */,
 				CE46CD502C0F161400A63F64 /* TabBarVCService.swift in Sources */,
-				CE4593382BE885330031FB59 /* StartVCUpdater.swift in Sources */,
 				34C05F402D002FFE0061E6A1 /* SettingsFeature.swift in Sources */,
-				CE4593362BE8851F0031FB59 /* StartVCBuilder.swift in Sources */,
-				34C05F3E2CFF23260061E6A1 /* HomeServiceFactory.swift in Sources */,
-				347267F92CE67BD500C81256 /* HomeVC.swift in Sources */,
-				347267FA2CE67BD500C81256 /* HomeFeature.swift in Sources */,
+				34C05F3E2CFF23260061E6A1 /* AuthServiceFactory.swift in Sources */,
+				347267F92CE67BD500C81256 /* AuthVC.swift in Sources */,
+				347267FA2CE67BD500C81256 /* AuthFeature.swift in Sources */,
 				34BAF9BD2D074C6000DC01D2 /* SettingsItems.swift in Sources */,
-				347267FB2CE67BD500C81256 /* HomeViewServicesHandler.swift in Sources */,
-				347267F12CE6753700C81256 /* MainCoordinator.swift in Sources */,
+				347267FB2CE67BD500C81256 /* AuthViewServicesHandler.swift in Sources */,
+				349FB36A2D649F8200942F01 /* MainCoordinator.swift in Sources */,
 				CE4593112BE873640031FB59 /* TabBarVC.swift in Sources */,
 				3405D6E82CF5E2AE00658A3C /* WelcomeCoordinator.swift in Sources */,
 				347268002CECF10900C81256 /* TabBarFlowCoordinator.swift in Sources */,
+				340548572D64D3F400CC8A0D /* AuthFlowCoordinator.swift in Sources */,
 				3489EFCC2D09C842005F3B65 /* MockHomeViewServicesHandler.swift in Sources */,
 				CE4593222BE87BB30031FB59 /* StartFeature.swift in Sources */,
 				CE46CD572C0F166700A63F64 /* Extension + UIViewController.swift in Sources */,
-				CE45933B2BE88C350031FB59 /* StartFlow.swift in Sources */,
+				340548552D64D2BD00CC8A0D /* AuthService.swift in Sources */,
 				CE45932B2BE87D880031FB59 /* TabBarFeature.swift in Sources */,
 				CE6663D02BE35AE700514E86 /* SceneDelegate.swift in Sources */,
 			);

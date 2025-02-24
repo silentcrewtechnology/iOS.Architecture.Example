@@ -2,23 +2,27 @@ import Foundation
 import Architecture
 import DesignSystem
 
-// Заменить в Templates
-final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
+final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
     
     deinit {
-        print("💀 удалился HomeFeature")
+        print("💀 удалился AuthFeature")
     }
     
+    // MARK: Properties
     private var loginInputText: String = ""
     private var loginPasswordText: String = ""
     
-    private var viewHandler: HomeViewServicesHandlerProtocol
-    private var factory: HomeServiceFactoryProtocol
-    private var vc: VC?
+    private var viewHandler: AuthViewServicesHandlerProtocol
+    private var factory: AuthServiceFactoryProtocol
+    private lazy var vc: VC = createViewClosure(viewProperties)
+    
+    private let createViewClosure: (VC.ViewProperties) -> VC
+    private let viewProperties: VC.ViewProperties
     
     // MARK: Logic Services
     private var authValidationService: AuthValidationServiceProtocol?
     
+    // MARK: Init
     enum Action {
         case tapButton
         case loginSuccess(String)
@@ -29,17 +33,18 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
     }
     
     init(
-        viewProperties: HomeVC.ViewProperties = .init(),
-        factory: HomeServiceFactoryProtocol = HomeServiceFactory(),
-        viewHandler: HomeViewServicesHandlerProtocol = HomeViewServicesHandler()
+        viewProperties: VC.ViewProperties,
+        factory: AuthServiceFactoryProtocol = AuthServiceFactory(),
+        createViewClosure: @escaping (VC.ViewProperties) -> VC,
+        viewHandler: AuthViewServicesHandlerProtocol = AuthViewServicesHandler()
     ) {
-        self.vc = HomeVC(
-            viewProperties: viewProperties
-        ) as? VC
+        self.viewProperties = viewProperties
         self.factory = factory
+        self.createViewClosure = createViewClosure
         self.viewHandler = viewHandler
     }
     
+    // MARK: Protocol methods
     var runNewFlow: ((Any) -> Void)?
     
     func runFlow(data: Any?) -> (any ViewProtocol)? {
@@ -53,7 +58,8 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
         case .tapButton:
             tapButtonAction()
         case .loginSuccess(let text):
-            runNewFlow?(TabBarFlow.homeWelcome(text))
+//            runNewFlow?(TabBarFlow.homeWelcome(text))
+            print("Login успешный")
         case .loginFailure:
             viewHandler.handleAction(.errorLogin)
         case .passwordFailure:
@@ -67,6 +73,7 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
         }
     }
     
+    // MARK: Private
     private func initialLogicServices() {
         authValidationService = factory.setupValidationService()
     }
@@ -101,13 +108,13 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
         if let viewProperties = viewHandler.getViewServices() as? VC.ViewProperties {
             // Если нужно дополнить или исправить viewProperties,
             // то делаем это здесь
-            vc?.update(with: viewProperties)
+            vc.update(with: viewProperties)
         }
     }
 }
 
 // MARK: Private methods
-extension HomeFeature {
+extension AuthFeature {
     private func tapButtonAction() {
         let isValidLogin = authValidationService?.validationLogin(login: loginInputText) ?? false
         let isValidPassword = authValidationService?.validationPassword(password: loginPasswordText) ?? false
