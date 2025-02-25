@@ -27,11 +27,6 @@ final class TabBarFlowCoordinator: CoordinatorProtocol {
         routerService: RouterService
     ) {
         self.routerService = routerService
-//        self.tabBarFeature = TabBarFeature<TabBarVC>(
-//            viewProperties: <TabBarVC>.ViewProperties(),
-//            createViewClosure: { viewProperties in
-////                AuthVC(viewProperties: viewProperties)
-////            })
     }
     
     func startFlow(data: Any?) {
@@ -64,8 +59,10 @@ final class TabBarFlowCoordinator: CoordinatorProtocol {
     private func createTabsControllers() -> [UIViewController] {
         let homeVC = UIViewController()
         homeVC.view.backgroundColor = .red
+        homeVC.tabBarItem.title = "Главная"
         let profileVC = UIViewController()
         profileVC.view.backgroundColor = .blue
+        profileVC.tabBarItem.title = "Профиль"
         return [homeVC, profileVC]
     }
     
