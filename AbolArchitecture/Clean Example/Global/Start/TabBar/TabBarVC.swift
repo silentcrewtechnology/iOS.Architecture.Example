@@ -2,8 +2,9 @@
 //  TabBarVC.swift
 //  AbolArchitecture
 //
-//  Created by firdavs on 02.05.2024.
+//  Created by Валерий Васин on 25.02.2025.
 //
+
 import Architecture
 import UIKit
 

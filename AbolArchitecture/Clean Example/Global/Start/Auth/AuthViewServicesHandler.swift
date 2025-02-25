@@ -49,6 +49,8 @@ public class AuthViewServicesHandler: AuthViewServicesHandlerProtocol {
         case errorPassword
         case clearLogin
         case clearPassword
+        case startVarification
+        case endVarification
     }
     
     // MARK: Logic
@@ -64,6 +66,10 @@ public class AuthViewServicesHandler: AuthViewServicesHandlerProtocol {
         case .clearPassword:
             loginInputService?.update(with: .init(state: .default), onTextChanged: nil)
             passwordInputService?.update(with: .init(state: .active), onTextChanged: nil)
+        case .startVarification:
+            buttonService?.update(with: .init(newState: .loading))
+        case .endVarification:
+            buttonService?.update(with: .init(newState: .default))
         }
     }
     

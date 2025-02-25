@@ -9,6 +9,10 @@ import Architecture
 import Router
 import UIKit
 
+enum AuthFlow {
+    case tabBar
+}
+
 final class AuthFlowCoordinator: CoordinatorProtocol {
     
     // MARK: - DI

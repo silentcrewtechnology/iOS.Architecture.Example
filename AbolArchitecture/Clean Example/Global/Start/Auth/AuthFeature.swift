@@ -22,7 +22,7 @@ final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
     // MARK: Logic Services
     private var authValidationService: AuthValidationServiceProtocol?
     
-    // MARK: Init
+    // MARK: Action
     enum Action {
         case tapButton
         case loginSuccess(String)
@@ -32,6 +32,7 @@ final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
         case passwordUpdate(String)
     }
     
+    // MARK: Init
     init(
         viewProperties: VC.ViewProperties,
         factory: AuthServiceFactoryProtocol = AuthServiceFactory(),
@@ -58,8 +59,7 @@ final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
         case .tapButton:
             tapButtonAction()
         case .loginSuccess(let text):
-//            runNewFlow?(TabBarFlow.homeWelcome(text))
-            print("Login успешный")
+            runNewFlow?(AuthFlow.tabBar)
         case .loginFailure:
             viewHandler.handleAction(.errorLogin)
         case .passwordFailure:
@@ -116,19 +116,27 @@ final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
 // MARK: Private methods
 extension AuthFeature {
     private func tapButtonAction() {
-        let isValidLogin = authValidationService?.validationLogin(login: loginInputText) ?? false
-        let isValidPassword = authValidationService?.validationPassword(password: loginPasswordText) ?? false
+        viewHandler.handleAction(.startVarification)
         
-        if !isValidLogin {
-            handleAction(.loginFailure)
-            return
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            guard let self else { return }
+            
+            self.viewHandler.handleAction(.endVarification)
+            
+            let isValidLogin = authValidationService?.validationLogin(login: loginInputText) ?? false
+            let isValidPassword = authValidationService?.validationPassword(password: loginPasswordText) ?? false
+            
+            if !isValidLogin {
+                handleAction(.loginFailure)
+                return
+            }
+            
+            if !isValidPassword {
+                handleAction(.passwordFailure)
+                return
+            }
+            
+            self.handleAction(.loginSuccess(loginInputText))
         }
-        
-        if !isValidPassword {
-            handleAction(.passwordFailure)
-            return
-        }
-        
-        self.handleAction(.loginSuccess(loginInputText))
     }
 }

@@ -15,14 +15,14 @@ struct MainCoordinator: MainCoordinatorProtocol {
     private let routerService: RouterService
     private let startFlowCoordinator: CoordinatorProtocol
     private let authFlowCoordinator: CoordinatorProtocol
-//    private let tabBarFlowCoordinator: CoordinatorProtocol
+    private let tabBarFlowCoordinator: CoordinatorProtocol
 //    private let welcomeCoordinator: WelcomeCoordinator
     
     init(routerService: RouterService) {
         self.routerService = routerService
         self.startFlowCoordinator = StartFlowCoordinator(routerService: routerService)
         self.authFlowCoordinator = AuthFlowCoordinator(routerService: routerService)
-//        self.tabBarFlowCoordinator = TabBarFlowCoordinator(routerService: routerService)
+        self.tabBarFlowCoordinator = TabBarFlowCoordinator(routerService: routerService)
 //        self.welcomeCoordinator = WelcomeCoordinator(routerService: routerService)
     }
     
@@ -32,7 +32,8 @@ struct MainCoordinator: MainCoordinatorProtocol {
     
     func setupCoordinatorsFlow() {
         setupStartFlowCoordinator()
-//        setupTabBarFlowCoordinator()
+        setupTabBarFlowCoordinator()
+        setupAuthFlowCoordinator()
 //        setupWelcomeCoordinator()
     }
     
@@ -46,7 +47,7 @@ struct MainCoordinator: MainCoordinatorProtocol {
             let isAuthorized = AuthService.shared.isUserAuth
             
             if isAuthorized {
-                print("Authorized")
+                tabBarFlowCoordinator.startFlow(data: nil)
             } else {
                 authFlowCoordinator.startFlow(data: nil)
             }
@@ -54,18 +55,30 @@ struct MainCoordinator: MainCoordinatorProtocol {
         })
     }
     
-//    private func setupTabBarFlowCoordinator() {
-//        tabBarFlowCoordinator.setupFlow(completion: { flow in
-//            if let tabBarFlow = flow as? TabBarFlow {
-//                switch tabBarFlow {
-//                case .homeWelcome(let welcomeText):
+    private func setupTabBarFlowCoordinator() {
+        tabBarFlowCoordinator.setupFlow(completion: { flow in
+            if let tabBarFlow = flow as? TabBarFlow {
+                switch tabBarFlow {
+                case .homeWelcome(let welcomeText):
+                    print("main homeWelcome")
 //                    welcomeCoordinator.startFlow(data: welcomeText)
-//                case .profileSettings:
-//                    break
-//                }
-//            }
-//        })
-//    }
+                case .profileSettings:
+                    print("main profileSettings")
+                }
+            }
+        })
+    }
+    
+    private func setupAuthFlowCoordinator() {
+        authFlowCoordinator.setupFlow(completion: { flow in
+            switch flow as? AuthFlow {
+            case .tabBar:
+                tabBarFlowCoordinator.startFlow(data: nil)
+            case .none:
+                break
+            }
+        })
+    }
     
 //    private func setupWelcomeCoordinator() {
 //        welcomeCoordinator.setupFlow(completion: { flow in
