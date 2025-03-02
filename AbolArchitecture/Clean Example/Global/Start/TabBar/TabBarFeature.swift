@@ -17,7 +17,7 @@ final class TabBarFeature<VC: ViewProtocol>: FeatureProtocol {
 //    private var tabBarVCBuilder: TabBarVCBuilder
     private var factory: TabBarServiceFactoryProtocol
     private lazy var vc: VC = createViewClosure(viewProperties)
-    private var viewHandler: TabBarServicesHandlerProtocol
+    private var viewHandler: TabBarViewServicesHandlerProtocol
     
     private let createViewClosure: (VC.ViewProperties) -> VC
     private let viewProperties: VC.ViewProperties
@@ -30,7 +30,7 @@ final class TabBarFeature<VC: ViewProtocol>: FeatureProtocol {
         viewProperties: VC.ViewProperties,
         factory: TabBarServiceFactoryProtocol = TabBarServiceFactory(),
         createViewClosure: @escaping (VC.ViewProperties) -> VC,
-        viewHandler: TabBarServicesHandlerProtocol = TabBarServicesHandler()
+        viewHandler: TabBarViewServicesHandlerProtocol = TabBarViewServicesHandler()
 //        tabBarVCBuilder: TabBarVCBuilder = TabBarVCBuilder(with: TabBarVC.ViewProperties())
     ) {
 //        self.tabBarVCBuilder = tabBarVCBuilder
@@ -54,7 +54,7 @@ final class TabBarFeature<VC: ViewProtocol>: FeatureProtocol {
         return vc
     }
     
-    func handleAction(_ action: Action) {
+    private func handleAction(_ action: Action) {
     }
     
     

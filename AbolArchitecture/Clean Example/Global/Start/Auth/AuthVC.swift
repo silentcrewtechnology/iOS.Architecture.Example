@@ -73,14 +73,15 @@ public final class AuthVC: UIViewController, ViewProtocol {
     
     public func update(with viewProperties: ViewProperties) {
         self.viewProperties = viewProperties
+        // TODO: вынести это во ViewProperties
         view.backgroundColor = .systemCyan
-        setupSubview()
+        setupSubviews()
         setupAccessibilityId()
         // Здесь обновляем все свойства вью
     }
     
     // MARK: Private funcs
-    private func setupSubview() {
+    private func setupSubviews() {
         // Здесь мы добавляем вьюхи и настраиваем констрейнты
         setuplogoView(with: viewProperties)
         setuploginViews(with: viewProperties)

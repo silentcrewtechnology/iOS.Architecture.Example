@@ -25,7 +25,7 @@ final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
     // MARK: Action
     enum Action {
         case tapButton
-        case loginSuccess(String)
+        case loginSuccess
         case loginFailure
         case passwordFailure
         case loginUpdate(String)
@@ -54,11 +54,11 @@ final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
         return vc
     }
     
-    func handleAction(_ action: Action) {
+    private func handleAction(_ action: Action) {
         switch action {
         case .tapButton:
             tapButtonAction()
-        case .loginSuccess(let text):
+        case .loginSuccess:
             runNewFlow?(AuthFlow.tabBar)
         case .loginFailure:
             viewHandler.handleAction(.errorLogin)
@@ -105,7 +105,7 @@ final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
             buttonService: buttonService
         )
         
-        if let viewProperties = viewHandler.getViewServices() as? VC.ViewProperties {
+        if let viewProperties = viewHandler.getViewFromServices() as? VC.ViewProperties {
             // Если нужно дополнить или исправить viewProperties,
             // то делаем это здесь
             vc.update(with: viewProperties)
@@ -136,7 +136,7 @@ extension AuthFeature {
                 return
             }
             
-            self.handleAction(.loginSuccess(loginInputText))
+            self.handleAction(.loginSuccess)
         }
     }
 }

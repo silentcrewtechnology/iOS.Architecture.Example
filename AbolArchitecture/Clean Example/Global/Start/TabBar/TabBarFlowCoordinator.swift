@@ -19,10 +19,10 @@ final class TabBarFlowCoordinator: CoordinatorProtocol {
     // MARK: - DI
     private let routerService: RouterService
     private var tabBarFeature: FeatureProtocol?
-
+    
     // MARK: Tabs:
     //    private var homeFeature: FeatureProtocol
-//    private var settingsFeature: FeatureProtocol
+    //    private var settingsFeature: FeatureProtocol
     init(
         routerService: RouterService
     ) {
@@ -30,7 +30,25 @@ final class TabBarFlowCoordinator: CoordinatorProtocol {
     }
     
     func startFlow(data: Any?) {
-//        guard let viewControllers = data as? [UIViewController] else { return }
+        setupTabBarFeature()
+        
+        let tabBarVC = tabBarFeature?.runFlow(data: nil)
+        if let vc = tabBarVC as? UIViewController {
+            routerService.present(with: .viewController(vc),
+                                  transitionStyle: .crossDissolve,
+                                  presentationStyle: .fullScreen,
+                                  completion: { })
+        }
+    }
+    
+    func setupFlow(completion: @escaping Closure<Any?>) {
+        tabBarFeature?.runNewFlow = completion
+    }
+}
+
+// MARK: Private methods
+extension TabBarFlowCoordinator {
+    private func setupTabBarFeature() {
         let viewControllers = createTabsControllers()
         let viewProperties = createTabBarVCViewProperties(viewControllers: viewControllers)
         
@@ -41,21 +59,8 @@ final class TabBarFlowCoordinator: CoordinatorProtocol {
                 TabBarVC(viewProperties: viewProperties)
             }
         )
-        
-        let tabBarVC = tabBarFeature?.runFlow(data: nil)
-        if let vc = tabBarVC as? UIViewController {
-            routerService.present(with: .viewController(vc),
-                                      transitionStyle: .crossDissolve,
-                                      presentationStyle: .fullScreen,
-                                      completion: { })
-        }
     }
     
-    func setupFlow(completion: @escaping Closure<Any?>) {
-        tabBarFeature?.runNewFlow = completion
-    }
-    
-    // MARK: Private methods
     private func createTabsControllers() -> [UIViewController] {
         let homeVC = UIViewController()
         homeVC.view.backgroundColor = .red

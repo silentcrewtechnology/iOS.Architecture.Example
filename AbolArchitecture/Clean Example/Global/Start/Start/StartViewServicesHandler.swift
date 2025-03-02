@@ -30,7 +30,7 @@ public class StartViewServicesHandler: StartViewServicesHandlerProtocol {
        // }
     }
     
-    public func getViewServices() -> StartVC.ViewProperties {
+    public func getViewFromServices() -> StartVC.ViewProperties {
        // guard
        //     let someService
        // else { return .init() }

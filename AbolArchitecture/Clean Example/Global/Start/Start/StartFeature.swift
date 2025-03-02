@@ -55,7 +55,7 @@ final class StartFeature<VC: ViewProtocol>: FeatureProtocol {
         return vc
     }
     
-    func handleAction(_ action: Action) {
+    private func handleAction(_ action: Action) {
         // switch action {
         // }
     }

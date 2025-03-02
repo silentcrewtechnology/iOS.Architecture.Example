@@ -12,7 +12,7 @@ protocol AuthViewServicesHandlerProtocol {
         buttonService: ButtonViewServiceProtocol
     )
     
-    func getViewServices() -> AuthVC.ViewProperties
+    func getViewFromServices() -> AuthVC.ViewProperties
     
     func handleAction(_ state: AuthViewServicesHandler.State)
 }
@@ -73,7 +73,7 @@ public class AuthViewServicesHandler: AuthViewServicesHandlerProtocol {
         }
     }
     
-    public func getViewServices() -> AuthVC.ViewProperties {
+    public func getViewFromServices() -> AuthVC.ViewProperties {
         guard
             let logoImageService,
             let loginLabelService,
