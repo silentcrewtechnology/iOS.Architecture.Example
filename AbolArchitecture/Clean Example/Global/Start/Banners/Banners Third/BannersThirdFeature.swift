@@ -30,7 +30,7 @@ final class BannersThirdFeature<VC: ViewProtocol>: FeatureProtocol {
     
     // MARK: Action
     enum Action {
-        // case someAction
+        case tapGoHomeButton
     }
     
     // MARK: - Init
@@ -58,19 +58,22 @@ final class BannersThirdFeature<VC: ViewProtocol>: FeatureProtocol {
     // MARK: handle Action
     private func handleAction(_ action: Action) {
         switch action {
-        // case .someAction:
+        case .tapGoHomeButton:
             // Здесь вызываем функцию связанную с конкретным Action
-            // someFunc()
+            tapToGoHomeAction()
         }
     }
     
     // MARK: initialUI
     private func initialUIServices() {
         // Здесь создаем UI сервисы, обращаяс к factory при создании
-        // let someUIService: SomeUIServiceProtocol = factory.setupSomeUIService()
+        let buttonService = factory.setupButtonViewService(onTap: { [weak self] in
+            guard let self else { return }
+            handleAction(.tapGoHomeButton)
+        })
         
         viewHandler.setServices(
-            // someUIService: someUIService
+            bannersButtonService: buttonService
         )
         
         if let viewProperties = viewHandler.getViewFromServices() as? VC.ViewProperties {
@@ -83,7 +86,7 @@ final class BannersThirdFeature<VC: ViewProtocol>: FeatureProtocol {
 
 // MARK: Private methods
 extension BannersThirdFeature {
-    // private func someFunc() {
-        
-    // }
+     private func tapToGoHomeAction() {
+         runNewFlow?(BannersFlow.goHome)
+     }
 }

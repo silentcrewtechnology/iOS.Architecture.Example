@@ -10,7 +10,7 @@ import Router
 import UIKit
 
 enum AuthFlow {
-    case tabBar
+    case tabBar(String)
 }
 
 final class AuthFlowCoordinator: CoordinatorProtocol {

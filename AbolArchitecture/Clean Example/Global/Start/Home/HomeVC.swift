@@ -17,15 +17,18 @@ public final class HomeVC: UIViewController, ViewProtocol {
     public struct ViewProperties {
         var accessibilityId = "HomeScreenController"
         var buttonView: UIView
+        var titleNameView: UIView
         // Здесь описываются все внутренние View
         // и остальные нужные для ViewController параметры
         
         public init(
             accessibilityId: String = "HomeScreenController",
-            buttonView: UIView = .init()
+            buttonView: UIView = .init(),
+            titleNameView: UIView = .init()
         ) {
             self.accessibilityId = accessibilityId
             self.buttonView = buttonView
+            self.titleNameView = titleNameView
         }
     }
     
@@ -70,7 +73,18 @@ extension HomeVC {
     
     private func setupSubviews() {
         // Здесь мы добавляем вьюхи и настраиваем констрейнты
+        setupTitleView(with: viewProperties)
         sutupButtonView(with: viewProperties)
+    }
+    
+    private func setupTitleView(with: ViewProperties) {
+        let title = viewProperties.titleNameView
+        guard title.superview != view else { return }
+        view.addSubview(title)
+        title.snp.makeConstraints {
+            $0.centerY.equalToSuperview().offset(-60)
+            $0.leading.equalToSuperview().offset(16)
+        }
     }
     
     private func sutupButtonView(with: ViewProperties) {
@@ -78,7 +92,7 @@ extension HomeVC {
         guard button.superview != view else { return }
         view.addSubview(button)
         button.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
+            $0.top.equalTo(viewProperties.titleNameView.snp.bottom).offset(26)
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.equalToSuperview().offset(-16)
         }

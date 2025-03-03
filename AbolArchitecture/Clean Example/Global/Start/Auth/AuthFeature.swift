@@ -25,7 +25,7 @@ final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
     // MARK: Action
     enum Action {
         case tapButton
-        case loginSuccess
+        case loginSuccess(String)
         case loginFailure
         case passwordFailure
         case loginUpdate(String)
@@ -58,8 +58,8 @@ final class AuthFeature<VC: ViewProtocol>: FeatureProtocol {
         switch action {
         case .tapButton:
             tapButtonAction()
-        case .loginSuccess:
-            runNewFlow?(AuthFlow.tabBar)
+        case .loginSuccess(let userName):
+            runNewFlow?(AuthFlow.tabBar(userName))
         case .loginFailure:
             viewHandler.handleAction(.errorLogin)
         case .passwordFailure:
@@ -136,7 +136,7 @@ extension AuthFeature {
                 return
             }
             
-            self.handleAction(.loginSuccess)
+            self.handleAction(.loginSuccess(loginInputText))
         }
     }
 }

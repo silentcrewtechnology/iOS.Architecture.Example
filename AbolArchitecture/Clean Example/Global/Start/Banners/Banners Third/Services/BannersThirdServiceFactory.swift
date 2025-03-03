@@ -10,7 +10,7 @@ import DesignSystem
 
 protocol BannersThirdServiceFactoryProtocol {
     // Пример для реализации метода фабрики
-    // func setupSomeUIService() -> SomeUIServiceProtocol
+    func setupButtonViewService(onTap: (() -> Void)?) -> ButtonViewServiceProtocol
     // func setupSomeService() -> SomeServiceProtocol
 }
 
@@ -18,12 +18,23 @@ final class BannersThirdServiceFactory: BannersThirdServiceFactoryProtocol {
     // Здесь создаем и конфигурируем как сервисы для View, так и сервисы для логики
     
     // Пример для реализации метода фабрики
-    // MARK: someUISrevice
-    // func setupSomeUIService() -> SomeUIServiceProtocol {
-    //     let someUIService = SomeUIService()
-    //     someUIService.update(with: nil)
-    //     return someUIService
-    // }
+    // MARK: Button
+    func setupButtonViewService(onTap: (() -> Void)?) -> ButtonViewServiceProtocol {
+        let buttonService = ButtonViewService(
+            viewProperties: .init(attributedText: "На главную".attributed),
+            style: .init(
+                size: .large,
+                color: .light,
+                variant: .primary,
+                state: .default,
+                icon: .without
+            )
+        )
+        buttonService.update(with: ButtonViewService.ButtonUpdateParameters(
+            newOnTap: onTap
+        ))
+        return buttonService
+    }
     
     // MARK: someSrevice
     // func setupSomeService() -> SomeServiceProtocol {

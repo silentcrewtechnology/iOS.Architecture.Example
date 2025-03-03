@@ -11,7 +11,7 @@ import DesignSystem
 protocol BannersThirdViewServicesHandlerProtocol {
     
     func setServices(
-        // someUIService: SomeUIServiceProtocol
+        bannersButtonService: ButtonViewServiceProtocol
     )
     
     func getViewFromServices() -> BannersThirdVC.ViewProperties
@@ -26,13 +26,13 @@ public final class BannersThirdViewServicesHandler: BannersThirdViewServicesHand
     }
     
     // MARK: UI
-    // private var someUIService: SomeUIServiceProtocol?
+    private var bannersButtonService: ButtonViewServiceProtocol?
     
     // MARK: Init
     func setServices(
-        // someUIService: SomeUIServiceProtocol
+        bannersButtonService: ButtonViewServiceProtocol
     ) {
-        // self.someUIService = someUIService
+        self.bannersButtonService = bannersButtonService
     }
     
     public enum State {
@@ -49,11 +49,11 @@ public final class BannersThirdViewServicesHandler: BannersThirdViewServicesHand
     }
     
     public func getViewFromServices() -> BannersThirdVC.ViewProperties {
-        // guard
-        //     let someUIService
-        // else { return .init() }
-        return .init(
-        //     someView: someUIService.view
-        )
+        guard
+            let bannersButtonService
+        else { return .init() }
+       return .init(
+           buttonView: bannersButtonService.view
+       )
     }
 }

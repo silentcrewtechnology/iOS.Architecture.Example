@@ -73,8 +73,8 @@ struct MainCoordinator: MainCoordinatorProtocol {
     private func setupAuthFlowCoordinator() {
         authFlowCoordinator.setupFlow(completion: { flow in
             switch flow as? AuthFlow {
-            case .tabBar:
-                tabBarFlowCoordinator.startFlow(data: nil)
+            case .tabBar(let userName):
+                tabBarFlowCoordinator.startFlow(data: userName)
             case .none:
                 break
             }

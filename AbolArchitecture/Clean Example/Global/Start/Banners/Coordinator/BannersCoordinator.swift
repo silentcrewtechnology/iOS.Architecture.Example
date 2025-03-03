@@ -13,6 +13,7 @@ enum BannersFlow {
     // Здесь перечисляем все переходы внутри одного флоу координатора
     case toSecondScreen
     case toThirdScreen
+    case goHome
 }
 
 final class BannersCoordinator: CoordinatorProtocol {
@@ -59,6 +60,8 @@ extension BannersCoordinator {
             navigateToSecondScreen()
         case .toThirdScreen:
             navigateToThirdScreen()
+        case .goHome:
+            goHome()
         }
     }
     
@@ -73,6 +76,13 @@ extension BannersCoordinator {
         if let vc = bannersThirdFeature?.runFlow(data: nil) as? UIViewController {
             routerService.pushMainNavigation(to: vc , animated: true)
         }
+    }
+    
+    private func goHome() {
+        routerService.popToRoot(animated: true)
+        bannersFeature = nil
+        bannersSecondFeature = nil
+        bannersThirdFeature = nil
     }
     
     // MARK: Setup

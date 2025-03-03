@@ -16,16 +16,16 @@ public final class BannersThirdVC: UIViewController, ViewProtocol {
     
     public struct ViewProperties {
         var accessibilityId = "BannersThirdScreenController"
-        // var someView: UIView
+        var buttonView: UIView
         // Здесь описываются все внутренние View
         // и остальные нужные для ViewController параметры
         
         public init(
-            accessibilityId: String = "BannersThirdScreenController"
-            // someView: UIView = .init()
+            accessibilityId: String = "BannersThirdScreenController",
+            buttonView: UIView = .init()
         ) {
             self.accessibilityId = accessibilityId
-            // self.someView = someView
+            self.buttonView = buttonView
         }
     }
     
@@ -70,18 +70,20 @@ extension BannersThirdVC {
     
     private func setupSubviews() {
         // Здесь мы добавляем вьюхи и настраиваем констрейнты
-        // sutupSomeView(with: viewProperties)
+        sutupButtonView(with: viewProperties)
     }
     
         // MARK: Пример
-    // private func sutupSomeView(with: ViewProperties) {
-        // let some = viewProperties.somelogoView
-        // guard some.superview != view else { return }
-        // view.addSubview(some)
-        // some.snp.makeConstraints {
-        //     $0.centerX.equalToSuperview()
-        //}
-    // }
+    private func sutupButtonView(with: ViewProperties) {
+        let button = viewProperties.buttonView
+        guard button.superview != view else { return }
+        view.addSubview(button)
+        button.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().offset(16)
+            $0.trailing.equalToSuperview().offset(-16)
+        }
+    }
     
     private func setupAccessibilityId() {
         view.isAccessibilityElement = true

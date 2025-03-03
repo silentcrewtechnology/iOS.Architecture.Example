@@ -11,6 +11,8 @@ import DesignSystem
 protocol HomeServiceFactoryProtocol {
     // Пример для реализации метода фабрики
     func setupBannersButtonViewService(onTap: (() -> Void)?) -> ButtonViewServiceProtocol
+    func setupTitleNameViewService(text: String) -> TitleViewServiceProtocol
+    
     // func setupSomeService() -> SomeServiceProtocol
 }
 
@@ -35,6 +37,18 @@ final class HomeServiceFactory: HomeServiceFactoryProtocol {
             newOnTap: onTap
         ))
         return buttonService
+    }
+    
+    // MARK: Title Name
+    func setupTitleNameViewService(text: String) -> TitleViewServiceProtocol {
+        let titleService = TitleViewService(
+            viewProperties: .init(
+                title: .init(string: text)
+            ),
+            style: .init(size: .extraLarge, color: .primary)
+        )
+
+        return titleService
     }
     
     // MARK: someSrevice

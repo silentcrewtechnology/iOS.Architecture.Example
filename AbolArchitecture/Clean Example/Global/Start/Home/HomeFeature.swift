@@ -50,7 +50,7 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
     // MARK: - FeatureProtocol
     func runFlow(data: Any?) -> (any ViewProtocol)? {
         // Здесь можно добавить инициализацию логики или UI-сервисов, если потребуется
-        initialUIServices() 
+        initialUIServices(data: data)
         return vc
     }
     
@@ -64,15 +64,21 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
     }
     
     // MARK: initialUI
-    private func initialUIServices() {
+    private func initialUIServices(data: Any?) {
         // Здесь создаем UI сервисы, обращаяс к factory при создании
         let buttonService = factory.setupBannersButtonViewService(onTap: { [weak self] in
             guard let self else { return }
             handleAction(.tapOnBannersButton)
         })
         
+        let userName = data as? String ?? "Home"
+        let text = "Привет, \(userName)!"
+        
+        let titleViewService = factory.setupTitleNameViewService(text: text)
+        
         viewHandler.setServices(
-            secondScreenButtonService: buttonService
+            secondScreenButtonService: buttonService,
+            titleViewService: titleViewService
         )
         
         if let viewProperties = viewHandler.getViewFromServices() as? VC.ViewProperties {
