@@ -88,8 +88,6 @@ extension NewAuthVC {
     }
     
     private func setuplogoView(with viewProperties: ViewProperties) {
-//        let logo = viewProperties.imageView
-//        guard logo.superview != view else { return }
         view.addSubview(logo)
         logo.snp.makeConstraints {
             $0.centerX.equalToSuperview()

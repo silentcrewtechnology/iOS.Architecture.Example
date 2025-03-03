@@ -14,7 +14,6 @@ final class TabBarFeature<VC: ViewProtocol>: FeatureProtocol {
         print("💀 удалился TabBarFeature")
     }
     
-//    private var tabBarVCBuilder: TabBarVCBuilder
     private var factory: TabBarServiceFactoryProtocol
     private lazy var vc: VC = createViewClosure(viewProperties)
     private var viewHandler: TabBarViewServicesHandlerProtocol
@@ -31,9 +30,7 @@ final class TabBarFeature<VC: ViewProtocol>: FeatureProtocol {
         factory: TabBarServiceFactoryProtocol = TabBarServiceFactory(),
         createViewClosure: @escaping (VC.ViewProperties) -> VC,
         viewHandler: TabBarViewServicesHandlerProtocol = TabBarViewServicesHandler()
-//        tabBarVCBuilder: TabBarVCBuilder = TabBarVCBuilder(with: TabBarVC.ViewProperties())
     ) {
-//        self.tabBarVCBuilder = tabBarVCBuilder
         self.viewProperties = viewProperties
         self.factory = factory
         self.createViewClosure = createViewClosure
@@ -45,10 +42,6 @@ final class TabBarFeature<VC: ViewProtocol>: FeatureProtocol {
     
     
     func runFlow(data: Any?) -> (any ViewProtocol)? {
-//        guard let viewControllers = data as? [UIViewController] else { return nil }
-//        let vp = createTabBarVCViewProperties(viewControllers: viewControllers)
-//        self.tabBarVCBuilder.viewUpdater.state = .setViewProperties(vp)
-        
         initialLogicServices()
         initialUIServices()
         return vc
@@ -64,17 +57,6 @@ final class TabBarFeature<VC: ViewProtocol>: FeatureProtocol {
     
     private func initialUIServices() {
     }
-//
-//    func runFlow(data: Any?) -> (any Architecture.BuilderProtocol)? {
-//        guard let viewControllers = data as? [UIViewController] else { return nil }
-//        let vp = createTabBarVCViewProperties(viewControllers: viewControllers)
-//        self.tabBarVCBuilder.viewUpdater.state = .setViewProperties(vp)
-//        return tabBarVCBuilder
-//    }
-//    
-//    private func setupTabBarVCBuilder(viewControllers: [UIViewController]) -> TabBarVCBuilder {
-//        return tabBarVCBuilder
-//    }
     
     private func createTabBarVCViewProperties(
         viewControllers: [UIViewController]

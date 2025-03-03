@@ -42,7 +42,6 @@ final class BannersCoordinator: CoordinatorProtocol {
         let bannersVC = bannersFeature?.runFlow(data: data)
         
          if let vc = bannersVC as? UIViewController {
-//             routerService.present(with: .viewController(vc))
              routerService.pushMainNavigation(to: vc , animated: true)
          }
         
@@ -135,5 +134,4 @@ extension BannersCoordinator {
             }
         }
     }
-    
 }

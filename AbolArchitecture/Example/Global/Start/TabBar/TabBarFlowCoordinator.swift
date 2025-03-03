@@ -58,7 +58,6 @@ final class TabBarFlowCoordinator: CoordinatorProtocol {
 // MARK: Private methods
 extension TabBarFlowCoordinator {
     private func setupTabBarFeature(data: Any?) {
-        let userName = data as? String
         let viewControllers = createTabsControllers(data: data)
         let viewProperties = createTabBarVCViewProperties(viewControllers: viewControllers)
         
@@ -75,13 +74,13 @@ extension TabBarFlowCoordinator {
         var viewControlelrs: [UIViewController] = []
         if let homeVC = homeFeature.runFlow(data: data) as? UIViewController {
             let navigationHomeVC = UINavigationController(rootViewController: homeVC)
-            navigationHomeVC.tabBarItem.title = "Главная"
+            navigationHomeVC.setTabBar(with: .main)
             viewControlelrs.append(navigationHomeVC)
         }
         let profileVC = UIViewController()
         profileVC.view.backgroundColor = .blue
         let navigationProfileVC = UINavigationController(rootViewController: profileVC)
-        navigationProfileVC.tabBarItem.title = "Профиль"
+        navigationProfileVC.setTabBar(with: .settings)
         viewControlelrs.append(navigationProfileVC)
         return viewControlelrs
     }

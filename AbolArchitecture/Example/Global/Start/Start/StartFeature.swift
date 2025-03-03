@@ -44,11 +44,6 @@ final class StartFeature<VC: ViewProtocol>: FeatureProtocol {
     
     /// Запускаем флоу, возвращая созданный view
     func runFlow(data: Any?) -> (any ViewProtocol)? {
-        // TODO: нужно ли этот закоменченый код снизу?
-        ///        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-        ////            self.runNewFlow?(StartFlow.tabBar)
-        ////        }
-        ///
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.runNewFlow?(1)
         }

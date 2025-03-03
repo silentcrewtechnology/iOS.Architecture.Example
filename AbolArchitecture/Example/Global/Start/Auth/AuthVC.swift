@@ -96,8 +96,6 @@ public final class AuthVC: UIViewController, ViewProtocol {
         logo.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(28)
-//            $0.width.equalTo(160)
-//            $0.height.equalTo(120)
         }
     }
     
