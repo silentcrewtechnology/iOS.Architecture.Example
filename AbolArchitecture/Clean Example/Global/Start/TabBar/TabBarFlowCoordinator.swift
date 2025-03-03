@@ -10,8 +10,7 @@ import Router
 import UIKit
 
 enum TabBarFlow {
-    case homeWelcome(String)
-    case profileSettings
+    case toBannersFromHome
 }
 
 final class TabBarFlowCoordinator: CoordinatorProtocol {
@@ -21,12 +20,21 @@ final class TabBarFlowCoordinator: CoordinatorProtocol {
     private var tabBarFeature: FeatureProtocol?
     
     // MARK: Tabs:
-    //    private var homeFeature: FeatureProtocol
+    private var homeFeature: FeatureProtocol
     //    private var settingsFeature: FeatureProtocol
+    
     init(
         routerService: RouterService
     ) {
         self.routerService = routerService
+        
+        self.homeFeature = HomeFeature<HomeVC>(
+            viewProperties: HomeVC.ViewProperties(),
+            createViewClosure: { viewProperties in
+                HomeVC(viewProperties: viewProperties)
+            }
+        )
+            
     }
     
     func startFlow(data: Any?) {
@@ -43,6 +51,7 @@ final class TabBarFlowCoordinator: CoordinatorProtocol {
     
     func setupFlow(completion: @escaping Closure<Any?>) {
         tabBarFeature?.runNewFlow = completion
+        homeFeature.runNewFlow = completion
     }
 }
 
@@ -62,13 +71,18 @@ extension TabBarFlowCoordinator {
     }
     
     private func createTabsControllers() -> [UIViewController] {
-        let homeVC = UIViewController()
-        homeVC.view.backgroundColor = .red
-        homeVC.tabBarItem.title = "Главная"
+        var viewControlelrs: [UIViewController] = []
+        if let homeVC = homeFeature.runFlow(data: nil) as? UIViewController {
+            let navigationHomeVC = UINavigationController(rootViewController: homeVC)
+            navigationHomeVC.tabBarItem.title = "Главная"
+            viewControlelrs.append(navigationHomeVC)
+        }
         let profileVC = UIViewController()
         profileVC.view.backgroundColor = .blue
-        profileVC.tabBarItem.title = "Профиль"
-        return [homeVC, profileVC]
+        let navigationProfileVC = UINavigationController(rootViewController: profileVC)
+        navigationProfileVC.tabBarItem.title = "Профиль"
+        viewControlelrs.append(navigationProfileVC)
+        return viewControlelrs
     }
     
     private func createTabBarVCViewProperties(

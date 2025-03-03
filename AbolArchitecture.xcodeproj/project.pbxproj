@@ -45,6 +45,19 @@
 		34B29FBF2D747A5F0064C3A2 /* HomeServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FBC2D747A5F0064C3A2 /* HomeServiceFactory.swift */; };
 		34B29FC02D747A5F0064C3A2 /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FB82D747A5F0064C3A2 /* HomeFeature.swift */; };
 		34B29FC12D747A5F0064C3A2 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FB92D747A5F0064C3A2 /* HomeVC.swift */; };
+		34B29FC92D7481010064C3A2 /* BannersFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FC32D7481010064C3A2 /* BannersFeature.swift */; };
+		34B29FCA2D7481010064C3A2 /* BannersServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FC72D7481010064C3A2 /* BannersServiceFactory.swift */; };
+		34B29FCB2D7481010064C3A2 /* BannersViewServicesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FC52D7481010064C3A2 /* BannersViewServicesHandler.swift */; };
+		34B29FCC2D7481010064C3A2 /* BannersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FC42D7481010064C3A2 /* BannersVC.swift */; };
+		34B29FCF2D7481140064C3A2 /* BannersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FCD2D7481140064C3A2 /* BannersCoordinator.swift */; };
+		34B29FD82D748EFA0064C3A2 /* BannersSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FD32D748EFA0064C3A2 /* BannersSecondVC.swift */; };
+		34B29FD92D748EFA0064C3A2 /* BannersSecondServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FD62D748EFA0064C3A2 /* BannersSecondServiceFactory.swift */; };
+		34B29FDA2D748EFA0064C3A2 /* BannersSecondFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FD22D748EFA0064C3A2 /* BannersSecondFeature.swift */; };
+		34B29FDB2D748EFA0064C3A2 /* BannersSecondViewServicesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FD42D748EFA0064C3A2 /* BannersSecondViewServicesHandler.swift */; };
+		34B29FF52D75FB8F0064C3A2 /* BannersThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FF02D75FB8F0064C3A2 /* BannersThirdVC.swift */; };
+		34B29FF62D75FB8F0064C3A2 /* BannersThirdServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FF32D75FB8F0064C3A2 /* BannersThirdServiceFactory.swift */; };
+		34B29FF72D75FB8F0064C3A2 /* BannersThirdViewServicesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FF12D75FB8F0064C3A2 /* BannersThirdViewServicesHandler.swift */; };
+		34B29FF82D75FB8F0064C3A2 /* BannersThirdFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B29FEF2D75FB8F0064C3A2 /* BannersThirdFeature.swift */; };
 		34BAF9BA2D073A3200DC01D2 /* WelcomeServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9B92D073A2B00DC01D2 /* WelcomeServiceFactory.swift */; };
 		34BAF9BD2D074C6000DC01D2 /* SettingsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9BC2D074C5600DC01D2 /* SettingsItems.swift */; };
 		34C05F3C2CFB377F0061E6A1 /* AuthValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C05F3B2CFB37700061E6A1 /* AuthValidationService.swift */; };
@@ -128,6 +141,20 @@
 		34B29FB92D747A5F0064C3A2 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		34B29FBA2D747A5F0064C3A2 /* HomeViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewServicesHandler.swift; sourceTree = "<group>"; };
 		34B29FBC2D747A5F0064C3A2 /* HomeServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceFactory.swift; sourceTree = "<group>"; };
+		34B29FC32D7481010064C3A2 /* BannersFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersFeature.swift; sourceTree = "<group>"; };
+		34B29FC42D7481010064C3A2 /* BannersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersVC.swift; sourceTree = "<group>"; };
+		34B29FC52D7481010064C3A2 /* BannersViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersViewServicesHandler.swift; sourceTree = "<group>"; };
+		34B29FC72D7481010064C3A2 /* BannersServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersServiceFactory.swift; sourceTree = "<group>"; };
+		34B29FCD2D7481140064C3A2 /* BannersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersCoordinator.swift; sourceTree = "<group>"; };
+		34B29FD22D748EFA0064C3A2 /* BannersSecondFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersSecondFeature.swift; sourceTree = "<group>"; };
+		34B29FD32D748EFA0064C3A2 /* BannersSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersSecondVC.swift; sourceTree = "<group>"; };
+		34B29FD42D748EFA0064C3A2 /* BannersSecondViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersSecondViewServicesHandler.swift; sourceTree = "<group>"; };
+		34B29FD62D748EFA0064C3A2 /* BannersSecondServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersSecondServiceFactory.swift; sourceTree = "<group>"; };
+		34B29FDC2D7493430064C3A2 /* ios-resources-ui-components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-resources-ui-components"; path = "../ios-resources-ui-components"; sourceTree = SOURCE_ROOT; };
+		34B29FEF2D75FB8F0064C3A2 /* BannersThirdFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersThirdFeature.swift; sourceTree = "<group>"; };
+		34B29FF02D75FB8F0064C3A2 /* BannersThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersThirdVC.swift; sourceTree = "<group>"; };
+		34B29FF12D75FB8F0064C3A2 /* BannersThirdViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersThirdViewServicesHandler.swift; sourceTree = "<group>"; };
+		34B29FF32D75FB8F0064C3A2 /* BannersThirdServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersThirdServiceFactory.swift; sourceTree = "<group>"; };
 		34BAF9B92D073A2B00DC01D2 /* WelcomeServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeServiceFactory.swift; sourceTree = "<group>"; };
 		34BAF9BC2D074C5600DC01D2 /* SettingsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItems.swift; sourceTree = "<group>"; };
 		34C05F3B2CFB37700061E6A1 /* AuthValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthValidationService.swift; sourceTree = "<group>"; };
@@ -391,6 +418,7 @@
 		349FB36B2D64A01C00942F01 /* Start */ = {
 			isa = PBXGroup;
 			children = (
+				34B29FC22D7480EE0064C3A2 /* Banners */,
 				34B29FB72D747A4D0064C3A2 /* Home */,
 				34B01CBB2D6DCB69001E86A9 /* TabBar */,
 				349FB36C2D64A04300942F01 /* Start */,
@@ -511,6 +539,106 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		34B29FC22D7480EE0064C3A2 /* Banners */ = {
+			isa = PBXGroup;
+			children = (
+				34B29FEE2D75FB3A0064C3A2 /* Banners Third */,
+				34B29FD12D748EDE0064C3A2 /* Banners Second */,
+				34B29FD02D74811B0064C3A2 /* BannersFirst */,
+				34B29FCE2D7481140064C3A2 /* Coordinator */,
+			);
+			path = Banners;
+			sourceTree = "<group>";
+		};
+		34B29FC62D7481010064C3A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		34B29FC82D7481010064C3A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34B29FC62D7481010064C3A2 /* Services */,
+				34B29FC72D7481010064C3A2 /* BannersServiceFactory.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		34B29FCE2D7481140064C3A2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				34B29FCD2D7481140064C3A2 /* BannersCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		34B29FD02D74811B0064C3A2 /* BannersFirst */ = {
+			isa = PBXGroup;
+			children = (
+				34B29FC32D7481010064C3A2 /* BannersFeature.swift */,
+				34B29FC42D7481010064C3A2 /* BannersVC.swift */,
+				34B29FC52D7481010064C3A2 /* BannersViewServicesHandler.swift */,
+				34B29FC82D7481010064C3A2 /* Services */,
+			);
+			path = BannersFirst;
+			sourceTree = "<group>";
+		};
+		34B29FD12D748EDE0064C3A2 /* Banners Second */ = {
+			isa = PBXGroup;
+			children = (
+				34B29FD22D748EFA0064C3A2 /* BannersSecondFeature.swift */,
+				34B29FD32D748EFA0064C3A2 /* BannersSecondVC.swift */,
+				34B29FD42D748EFA0064C3A2 /* BannersSecondViewServicesHandler.swift */,
+				34B29FD72D748EFA0064C3A2 /* Services */,
+			);
+			path = "Banners Second";
+			sourceTree = "<group>";
+		};
+		34B29FD52D748EFA0064C3A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		34B29FD72D748EFA0064C3A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34B29FD52D748EFA0064C3A2 /* Services */,
+				34B29FD62D748EFA0064C3A2 /* BannersSecondServiceFactory.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		34B29FEE2D75FB3A0064C3A2 /* Banners Third */ = {
+			isa = PBXGroup;
+			children = (
+				34B29FEF2D75FB8F0064C3A2 /* BannersThirdFeature.swift */,
+				34B29FF02D75FB8F0064C3A2 /* BannersThirdVC.swift */,
+				34B29FF12D75FB8F0064C3A2 /* BannersThirdViewServicesHandler.swift */,
+				34B29FF42D75FB8F0064C3A2 /* Services */,
+			);
+			path = "Banners Third";
+			sourceTree = "<group>";
+		};
+		34B29FF22D75FB8F0064C3A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		34B29FF42D75FB8F0064C3A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34B29FF22D75FB8F0064C3A2 /* Services */,
+				34B29FF32D75FB8F0064C3A2 /* BannersThirdServiceFactory.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		34BAF9BB2D0745BE00DC01D2 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +674,7 @@
 		CE6663C12BE35AE700514E86 = {
 			isa = PBXGroup;
 			children = (
+				34B29FDC2D7493430064C3A2 /* ios-resources-ui-components */,
 				34B29F942D71763F0064C3A2 /* ios.designsystem */,
 				345D04642D6F5C5F0071BD66 /* ios.architecture */,
 				34B01CBA2D6CB13E001E86A9 /* ios-service-routing */,
@@ -773,6 +902,7 @@
 				34B29FC02D747A5F0064C3A2 /* HomeFeature.swift in Sources */,
 				34B29FC12D747A5F0064C3A2 /* HomeVC.swift in Sources */,
 				34B01CC32D6DDF89001E86A9 /* TabBarVC.swift in Sources */,
+				34B29FCF2D7481140064C3A2 /* BannersCoordinator.swift in Sources */,
 				34B01CBD2D6DCB81001E86A9 /* TabBarFeature.swift in Sources */,
 				CE6663CE2BE35AE700514E86 /* AppDelegate.swift in Sources */,
 				34BAF9BA2D073A3200DC01D2 /* WelcomeServiceFactory.swift in Sources */,
@@ -788,7 +918,19 @@
 				349FB3742D64A5BF00942F01 /* StartViewServicesHandler.swift in Sources */,
 				349FB3712D64A2C500942F01 /* StartServiceFactory.swift in Sources */,
 				CE46CD502C0F161400A63F64 /* TabBarVCService.swift in Sources */,
+				34B29FC92D7481010064C3A2 /* BannersFeature.swift in Sources */,
+				34B29FCA2D7481010064C3A2 /* BannersServiceFactory.swift in Sources */,
+				34B29FCB2D7481010064C3A2 /* BannersViewServicesHandler.swift in Sources */,
+				34B29FF52D75FB8F0064C3A2 /* BannersThirdVC.swift in Sources */,
+				34B29FF62D75FB8F0064C3A2 /* BannersThirdServiceFactory.swift in Sources */,
+				34B29FF72D75FB8F0064C3A2 /* BannersThirdViewServicesHandler.swift in Sources */,
+				34B29FF82D75FB8F0064C3A2 /* BannersThirdFeature.swift in Sources */,
+				34B29FCC2D7481010064C3A2 /* BannersVC.swift in Sources */,
 				34C05F402D002FFE0061E6A1 /* SettingsFeature.swift in Sources */,
+				34B29FD82D748EFA0064C3A2 /* BannersSecondVC.swift in Sources */,
+				34B29FD92D748EFA0064C3A2 /* BannersSecondServiceFactory.swift in Sources */,
+				34B29FDA2D748EFA0064C3A2 /* BannersSecondFeature.swift in Sources */,
+				34B29FDB2D748EFA0064C3A2 /* BannersSecondViewServicesHandler.swift in Sources */,
 				34C05F3E2CFF23260061E6A1 /* AuthServiceFactory.swift in Sources */,
 				347267F92CE67BD500C81256 /* AuthVC.swift in Sources */,
 				347267FA2CE67BD500C81256 /* AuthFeature.swift in Sources */,

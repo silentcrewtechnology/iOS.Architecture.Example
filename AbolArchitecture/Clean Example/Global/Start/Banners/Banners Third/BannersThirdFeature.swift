@@ -1,22 +1,22 @@
 // 
-//  HomeFeature.swift
+//  BannersThirdFeature.swift
 //  AbolArchitecture
 //
-//  Created by Валерий Васин on 02.03.2025.
+//  Created by Валерий Васин on 03.03.2025.
 //
 
 import Foundation
 import Architecture
 
-final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
+final class BannersThirdFeature<VC: ViewProtocol>: FeatureProtocol {
 
     deinit {
-        print("💀 удалился HomeFeature")
+        print("💀 удалился BannersThirdFeature")
     }
     
     // MARK: - Properties
-    private let factory: HomeServiceFactoryProtocol
-    private var viewHandler: HomeViewServicesHandlerProtocol
+    private let factory: BannersThirdServiceFactoryProtocol
+    private var viewHandler: BannersThirdViewServicesHandlerProtocol
     private lazy var vc: VC = createViewClosure(viewProperties)
     
     private let viewProperties: VC.ViewProperties
@@ -30,14 +30,14 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
     
     // MARK: Action
     enum Action {
-        case tapOnBannersButton
+        // case someAction
     }
     
     // MARK: - Init
     init(
            viewProperties: VC.ViewProperties,
-           factory: HomeServiceFactoryProtocol = HomeServiceFactory(),
-           viewHandler: HomeViewServicesHandlerProtocol = HomeViewServicesHandler(),
+           factory: BannersThirdServiceFactoryProtocol = BannersThirdServiceFactory(),
+           viewHandler: BannersThirdViewServicesHandlerProtocol = BannersThirdViewServicesHandler(),
            createViewClosure: @escaping (VC.ViewProperties) -> VC
        ) {
            self.viewProperties = viewProperties
@@ -50,29 +50,27 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
     // MARK: - FeatureProtocol
     func runFlow(data: Any?) -> (any ViewProtocol)? {
         // Здесь можно добавить инициализацию логики или UI-сервисов, если потребуется
-        initialUIServices() 
+        // initialLogicServices()
+        initialUIServices()
         return vc
     }
     
     // MARK: handle Action
     private func handleAction(_ action: Action) {
         switch action {
-         case .tapOnBannersButton:
+        // case .someAction:
             // Здесь вызываем функцию связанную с конкретным Action
-            tapOnBannersButtonAction()
+            // someFunc()
         }
     }
     
     // MARK: initialUI
     private func initialUIServices() {
         // Здесь создаем UI сервисы, обращаяс к factory при создании
-        let buttonService = factory.setupBannersButtonViewService(onTap: { [weak self] in
-            guard let self else { return }
-            handleAction(.tapOnBannersButton)
-        })
+        // let someUIService: SomeUIServiceProtocol = factory.setupSomeUIService()
         
         viewHandler.setServices(
-            secondScreenButtonService: buttonService
+            // someUIService: someUIService
         )
         
         if let viewProperties = viewHandler.getViewFromServices() as? VC.ViewProperties {
@@ -84,8 +82,8 @@ final class HomeFeature<VC: ViewProtocol>: FeatureProtocol {
 }
 
 // MARK: Private methods
-extension HomeFeature {
-     private func tapOnBannersButtonAction() {
-         runNewFlow?(TabBarFlow.toBannersFromHome)
-     }
+extension BannersThirdFeature {
+    // private func someFunc() {
+        
+    // }
 }

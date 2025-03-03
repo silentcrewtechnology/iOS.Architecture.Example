@@ -11,7 +11,7 @@ import DesignSystem
 protocol HomeViewServicesHandlerProtocol {
     
     func setServices(
-        // someUIService: SomeUIServiceProtocol
+        secondScreenButtonService: ButtonViewServiceProtocol
     )
     
     func getViewFromServices() -> HomeVC.ViewProperties
@@ -26,13 +26,13 @@ public final class HomeViewServicesHandler: HomeViewServicesHandlerProtocol {
     }
     
     // MARK: UI
-    // private var someUIService: SomeUIServiceProtocol?
+     private var secondScreenButtonService: ButtonViewServiceProtocol?
     
     // MARK: Init
     func setServices(
-        // someUIService: SomeUIServiceProtocol
+        secondScreenButtonService: ButtonViewServiceProtocol
     ) {
-        // self.someUIService = someUIService
+         self.secondScreenButtonService = secondScreenButtonService
     }
     
     public enum State {
@@ -49,11 +49,11 @@ public final class HomeViewServicesHandler: HomeViewServicesHandlerProtocol {
     }
     
     public func getViewFromServices() -> HomeVC.ViewProperties {
-        // guard
-        //     let someUIService
-        // else { return .init() }
+         guard
+             let secondScreenButtonService
+         else { return .init() }
         return .init(
-        //     someView: someUIService.view
+            buttonView: secondScreenButtonService.view
         )
     }
 }

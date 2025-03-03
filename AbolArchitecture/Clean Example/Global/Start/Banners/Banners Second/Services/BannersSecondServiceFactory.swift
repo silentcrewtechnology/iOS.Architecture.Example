@@ -1,5 +1,5 @@
 // 
-//  HomeServiceFactory.swift
+//  BannersSecondServiceFactory.swift
 //  AbolArchitecture
 //
 //  Created by Валерий Васин on 02.03.2025.
@@ -8,21 +8,20 @@
 import UIKit
 import DesignSystem
 
-protocol HomeServiceFactoryProtocol {
+protocol BannersSecondServiceFactoryProtocol {
     // Пример для реализации метода фабрики
-    func setupBannersButtonViewService(onTap: (() -> Void)?) -> ButtonViewServiceProtocol
+    func setupButtonViewService(onTap: (() -> Void)?) -> ButtonViewServiceProtocol
     // func setupSomeService() -> SomeServiceProtocol
 }
 
-final class HomeServiceFactory: HomeServiceFactoryProtocol {
+final class BannersSecondServiceFactory: BannersSecondServiceFactoryProtocol {
     // Здесь создаем и конфигурируем как сервисы для View, так и сервисы для логики
     
+    // Пример для реализации метода фабрики
     // MARK: Button
-    func setupBannersButtonViewService(onTap: (() -> Void)?) -> ButtonViewServiceProtocol {
+    func setupButtonViewService(onTap: (() -> Void)?) -> ButtonViewServiceProtocol {
         let buttonService = ButtonViewService(
-            viewProperties: .init(
-                attributedText: "Флоу Баннеров".attributed
-            ),
+            viewProperties: .init(attributedText: "Переход на третий экран".attributed),
             style: .init(
                 size: .large,
                 color: .light,

@@ -1,5 +1,5 @@
 // 
-//  HomeVC.swift
+//  BannersSecondVC.swift
 //  AbolArchitecture
 //
 //  Created by Валерий Васин on 02.03.2025.
@@ -8,20 +8,20 @@
 import Architecture
 import UIKit
 
-public final class HomeVC: UIViewController, ViewProtocol {
+public final class BannersSecondVC: UIViewController, ViewProtocol {
     
     deinit {
-        print("💀 удалился HomeScreenController")
+        print("💀 удалился BannersSecondScreenController")
     }
     
     public struct ViewProperties {
-        var accessibilityId = "HomeScreenController"
+        var accessibilityId = "BannersSecondScreenController"
         var buttonView: UIView
         // Здесь описываются все внутренние View
         // и остальные нужные для ViewController параметры
         
         public init(
-            accessibilityId: String = "HomeScreenController",
+            accessibilityId: String = "BannersSecondScreenController",
             buttonView: UIView = .init()
         ) {
             self.accessibilityId = accessibilityId
@@ -37,7 +37,7 @@ public final class HomeVC: UIViewController, ViewProtocol {
     public init(viewProperties: ViewProperties) {
         self.viewProperties = viewProperties
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemCyan
+        view.backgroundColor = .systemMint
     }
     
     required init?(coder: NSCoder) {
@@ -66,13 +66,14 @@ public final class HomeVC: UIViewController, ViewProtocol {
 }
 
 // MARK: Private funcs
-extension HomeVC {
+extension BannersSecondVC {
     
     private func setupSubviews() {
         // Здесь мы добавляем вьюхи и настраиваем констрейнты
         sutupButtonView(with: viewProperties)
     }
     
+        // MARK: Пример
     private func sutupButtonView(with: ViewProperties) {
         let button = viewProperties.buttonView
         guard button.superview != view else { return }

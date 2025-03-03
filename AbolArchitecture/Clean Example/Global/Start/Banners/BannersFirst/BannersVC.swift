@@ -1,5 +1,5 @@
 // 
-//  HomeVC.swift
+//  BannersVC.swift
 //  AbolArchitecture
 //
 //  Created by Валерий Васин on 02.03.2025.
@@ -8,20 +8,20 @@
 import Architecture
 import UIKit
 
-public final class HomeVC: UIViewController, ViewProtocol {
+public final class BannersVC: UIViewController, ViewProtocol {
     
     deinit {
-        print("💀 удалился HomeScreenController")
+        print("💀 удалился BannersScreenController")
     }
     
     public struct ViewProperties {
-        var accessibilityId = "HomeScreenController"
+        var accessibilityId = "BannersScreenController"
         var buttonView: UIView
         // Здесь описываются все внутренние View
         // и остальные нужные для ViewController параметры
         
         public init(
-            accessibilityId: String = "HomeScreenController",
+            accessibilityId: String = "BannersScreenController",
             buttonView: UIView = .init()
         ) {
             self.accessibilityId = accessibilityId
@@ -37,7 +37,7 @@ public final class HomeVC: UIViewController, ViewProtocol {
     public init(viewProperties: ViewProperties) {
         self.viewProperties = viewProperties
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .systemCyan
+        view.backgroundColor = .systemOrange
     }
     
     required init?(coder: NSCoder) {
@@ -66,11 +66,11 @@ public final class HomeVC: UIViewController, ViewProtocol {
 }
 
 // MARK: Private funcs
-extension HomeVC {
+extension BannersVC {
     
     private func setupSubviews() {
         // Здесь мы добавляем вьюхи и настраиваем констрейнты
-        sutupButtonView(with: viewProperties)
+         sutupButtonView(with: viewProperties)
     }
     
     private func sutupButtonView(with: ViewProperties) {
@@ -78,11 +78,11 @@ extension HomeVC {
         guard button.superview != view else { return }
         view.addSubview(button)
         button.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
+            $0.centerX.centerY.equalToSuperview()
             $0.leading.equalToSuperview().offset(16)
             $0.trailing.equalToSuperview().offset(-16)
         }
-    }
+     }
     
     private func setupAccessibilityId() {
         view.isAccessibilityElement = true

@@ -16,14 +16,14 @@ struct MainCoordinator: MainCoordinatorProtocol {
     private let startFlowCoordinator: CoordinatorProtocol
     private let authFlowCoordinator: CoordinatorProtocol
     private let tabBarFlowCoordinator: CoordinatorProtocol
-//    private let welcomeCoordinator: WelcomeCoordinator
+    private let bannersCoordinator: BannersCoordinator
     
     init(routerService: RouterService) {
         self.routerService = routerService
         self.startFlowCoordinator = StartFlowCoordinator(routerService: routerService)
         self.authFlowCoordinator = AuthFlowCoordinator(routerService: routerService)
         self.tabBarFlowCoordinator = TabBarFlowCoordinator(routerService: routerService)
-//        self.welcomeCoordinator = WelcomeCoordinator(routerService: routerService)
+        self.bannersCoordinator = BannersCoordinator(routerService: routerService)
     }
     
     func setRoot() {
@@ -34,7 +34,7 @@ struct MainCoordinator: MainCoordinatorProtocol {
         setupStartFlowCoordinator()
         setupTabBarFlowCoordinator()
         setupAuthFlowCoordinator()
-//        setupWelcomeCoordinator()
+        setupBannersCoordinator()
     }
     
     
@@ -59,11 +59,12 @@ struct MainCoordinator: MainCoordinatorProtocol {
         tabBarFlowCoordinator.setupFlow(completion: { flow in
             if let tabBarFlow = flow as? TabBarFlow {
                 switch tabBarFlow {
-                case .homeWelcome(let welcomeText):
-                    print("main homeWelcome")
+                case .toBannersFromHome:
+                    print("main toBannersFromHome")
+                    bannersCoordinator.startFlow(data: nil)
 //                    welcomeCoordinator.startFlow(data: welcomeText)
-                case .profileSettings:
-                    print("main profileSettings")
+//                case .profileSettings:
+//                    print("main profileSettings")
                 }
             }
         })
@@ -80,20 +81,24 @@ struct MainCoordinator: MainCoordinatorProtocol {
         })
     }
     
-//    private func setupWelcomeCoordinator() {
-//        welcomeCoordinator.setupFlow(completion: { flow in
-//            if let welcomeFlow = flow as? WelcomeFlow {
-//                switch welcomeFlow {
-//                case .newFlowOne:
+    private func setupBannersCoordinator() {
+        bannersCoordinator.setupFlow(completion: { _ in })
+        
+//        bannersCoordinator.setupFlow(completion: { flow in
+//            if let bannersFlow = flow as? BannersFlow {
+//                switch bannersFlow {
+//                case .toSecondScreen:
+//                    print("main toSecondScreen")
 //                    //Здесь делаем startFlow у координатора flowOne
 //                    break
-//                case .newFlowTwo:
+//                case .toThirdScreen:
+//                    print("main toThirdScreen")
 //                    //Здесь делаем startFlow у координатора flowTwo
 //                    break
 //                }
 //            }
 //        })
-//    }
+    }
 }
 
 
