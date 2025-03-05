@@ -58,8 +58,8 @@ public final class HomeViewServicesHandler: HomeViewServicesHandlerProtocol {
              let titleViewService
          else { return .init() }
         return .init(
-            buttonView: secondScreenButtonService.view,
-            titleNameView: titleViewService.view
+            titleNameView: titleViewService.view,
+            buttonView: secondScreenButtonService.view
         )
     }
 }
