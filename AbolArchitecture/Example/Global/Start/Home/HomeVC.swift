@@ -16,19 +16,19 @@ public final class HomeVC: UIViewController, ViewProtocol {
     
     public struct ViewProperties {
         var accessibilityId = "HomeScreenController"
-        var buttonView: UIView
         var titleNameView: UIView
+        var buttonView: UIView
         // Здесь описываются все внутренние View
         // и остальные нужные для ViewController параметры
         
         public init(
             accessibilityId: String = "HomeScreenController",
-            buttonView: UIView = .init(),
-            titleNameView: UIView = .init()
+            titleNameView: UIView = .init(),
+            buttonView: UIView = .init()
         ) {
             self.accessibilityId = accessibilityId
-            self.buttonView = buttonView
             self.titleNameView = titleNameView
+            self.buttonView = buttonView
         }
     }
     

@@ -97,7 +97,6 @@
 		3428B7342CF6232C00336EA5 /* MockInputViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInputViewService.swift; sourceTree = "<group>"; };
 		3428B7362CF6237300336EA5 /* MockLabelViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLabelViewService.swift; sourceTree = "<group>"; };
 		3428B7382CF623D100336EA5 /* HomeFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeatureTests.swift; sourceTree = "<group>"; };
-		345D04642D6F5C5F0071BD66 /* ios.architecture */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ios.architecture; path = ../ios.architecture; sourceTree = SOURCE_ROOT; };
 		347267F52CE67BD500C81256 /* AuthFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFeature.swift; sourceTree = "<group>"; };
 		347267F62CE67BD500C81256 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		347267F72CE67BD500C81256 /* AuthViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewServicesHandler.swift; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 		349FB3692D649F7D00942F01 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		349FB3702D64A2BC00942F01 /* StartServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartServiceFactory.swift; sourceTree = "<group>"; };
 		349FB3732D64A5AE00942F01 /* StartViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewServicesHandler.swift; sourceTree = "<group>"; };
-		34B01CBA2D6CB13E001E86A9 /* ios-service-routing */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-service-routing"; path = "../ios-service-routing"; sourceTree = SOURCE_ROOT; };
 		34B01CBC2D6DCB7F001E86A9 /* TabBarFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFeature.swift; sourceTree = "<group>"; };
 		34B01CBE2D6DCC0D001E86A9 /* TabBarServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarServiceFactory.swift; sourceTree = "<group>"; };
 		34B01CC02D6DCCDA001E86A9 /* TabBarViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewServicesHandler.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 		34B29F8B2D7160B00064C3A2 /* NewAuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAuthVC.swift; sourceTree = "<group>"; };
 		34B29F8C2D7160B00064C3A2 /* NewAuthViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAuthViewServicesHandler.swift; sourceTree = "<group>"; };
 		34B29F8E2D7160B00064C3A2 /* NewAuthServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAuthServiceFactory.swift; sourceTree = "<group>"; };
-		34B29F942D71763F0064C3A2 /* ios.designsystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ios.designsystem; path = ../ios.designsystem; sourceTree = SOURCE_ROOT; };
 		34B29FB82D747A5F0064C3A2 /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
 		34B29FB92D747A5F0064C3A2 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		34B29FBA2D747A5F0064C3A2 /* HomeViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewServicesHandler.swift; sourceTree = "<group>"; };
@@ -133,7 +130,6 @@
 		34B29FD32D748EFA0064C3A2 /* BannersSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersSecondVC.swift; sourceTree = "<group>"; };
 		34B29FD42D748EFA0064C3A2 /* BannersSecondViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersSecondViewServicesHandler.swift; sourceTree = "<group>"; };
 		34B29FD62D748EFA0064C3A2 /* BannersSecondServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersSecondServiceFactory.swift; sourceTree = "<group>"; };
-		34B29FDC2D7493430064C3A2 /* ios-resources-ui-components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-resources-ui-components"; path = "../ios-resources-ui-components"; sourceTree = SOURCE_ROOT; };
 		34B29FEF2D75FB8F0064C3A2 /* BannersThirdFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersThirdFeature.swift; sourceTree = "<group>"; };
 		34B29FF02D75FB8F0064C3A2 /* BannersThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersThirdVC.swift; sourceTree = "<group>"; };
 		34B29FF12D75FB8F0064C3A2 /* BannersThirdViewServicesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersThirdViewServicesHandler.swift; sourceTree = "<group>"; };
@@ -316,8 +312,8 @@
 		349FB36C2D64A04300942F01 /* Start */ = {
 			isa = PBXGroup;
 			children = (
+				34B2A0062D775B6B0064C3A2 /* Coordinator */,
 				349FB3722D64A57A00942F01 /* Services */,
-				CE4593262BE87C9D0031FB59 /* StartFlowCoordinator.swift */,
 				349FB3732D64A5AE00942F01 /* StartViewServicesHandler.swift */,
 				CE4593332BE884FE0031FB59 /* StartVC.swift */,
 				CE4593212BE87BB30031FB59 /* StartFeature.swift */,
@@ -328,8 +324,8 @@
 		349FB36D2D64A04900942F01 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				34B2A0052D775B5C0064C3A2 /* Coordinator */,
 				34C05F382CFB1FE10061E6A1 /* Services */,
-				340548562D64D3EC00CC8A0D /* AuthFlowCoordinator.swift */,
 				347267F72CE67BD500C81256 /* AuthViewServicesHandler.swift */,
 				347267F62CE67BD500C81256 /* AuthVC.swift */,
 				347267F52CE67BD500C81256 /* AuthFeature.swift */,
@@ -356,8 +352,8 @@
 		34B01CBB2D6DCB69001E86A9 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				34B2A0042D775B470064C3A2 /* Coordinator */,
 				34B01CC42D6DEA82001E86A9 /* Services */,
-				34B01CC62D6DEA9B001E86A9 /* TabBarFlowCoordinator.swift */,
 				34B01CC22D6DDF86001E86A9 /* TabBarVC.swift */,
 				34B01CC02D6DCCDA001E86A9 /* TabBarViewServicesHandler.swift */,
 				34B01CBC2D6DCB7F001E86A9 /* TabBarFeature.swift */,
@@ -524,6 +520,30 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		34B2A0042D775B470064C3A2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				34B01CC62D6DEA9B001E86A9 /* TabBarFlowCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		34B2A0052D775B5C0064C3A2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				340548562D64D3EC00CC8A0D /* AuthFlowCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		34B2A0062D775B6B0064C3A2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CE4593262BE87C9D0031FB59 /* StartFlowCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		34C05F382CFB1FE10061E6A1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,10 +563,6 @@
 		CE6663C12BE35AE700514E86 = {
 			isa = PBXGroup;
 			children = (
-				34B29FDC2D7493430064C3A2 /* ios-resources-ui-components */,
-				34B29F942D71763F0064C3A2 /* ios.designsystem */,
-				345D04642D6F5C5F0071BD66 /* ios.architecture */,
-				34B01CBA2D6CB13E001E86A9 /* ios-service-routing */,
 				CE6663CC2BE35AE700514E86 /* AbolArchitecture */,
 				CE6663E32BE35AE900514E86 /* ArchitectureTests */,
 				CE6663ED2BE35AE900514E86 /* ArchitectureUITests */,
