@@ -1166,10 +1166,10 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		348C537C2C73980600ACEA5C /* XCRemoteSwiftPackageReference "ios-resources-bottom-sheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.akbars.tech/abo/ios-resources-bottom-sheet";
+			repositoryURL = "https://github.com/silentcrewtechnology/iOS.Resources.BottomSheet.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 13.0.0;
+				minimumVersion = 1.0.0;
 			};
 		};
 		348C537F2C73982100ACEA5C /* XCRemoteSwiftPackageReference "Resolver" */ = {
@@ -1182,10 +1182,10 @@
 		};
 		348C53822C73983000ACEA5C /* XCRemoteSwiftPackageReference "ios-service-routing" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitlab.akbars.tech/abo/ios-service-routing";
+			repositoryURL = "https://github.com/silentcrewtechnology/iOS.Service.Routing.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.2;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
